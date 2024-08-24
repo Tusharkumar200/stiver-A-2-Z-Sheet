@@ -12,6 +12,15 @@ public class Increasing_Number_Triangle_Pattern {
     
     public static void INTP(int num){
 
+        int N =1;
+        for (int i = 1; i <= num; i++) {
+            for (int j = 1; j <=i ; j++) {
+                System.out.print(N+" ");
+                N= N+1;
+            }
+            
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) {
