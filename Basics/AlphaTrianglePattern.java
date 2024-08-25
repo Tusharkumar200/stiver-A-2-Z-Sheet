@@ -6,11 +6,18 @@ public class AlphaTrianglePattern {
         B C
         A B C
      */
-    public static void ATP(int n){
+    public static void ATP(int N){
 
+        for(int i=0; i<N; i++){
+
+            for (char ch = (char) ('A' + N - 1); ch >= (char) ('A' + N - 1 - i); ch--) {
+                System.out.print(ch + " ");
+            }
+            System.out.println();
+        }
     }
     public static void main(String[] args) {
         int n =5;
-        ATP(N);
+        ATP(n);
     }
 }
