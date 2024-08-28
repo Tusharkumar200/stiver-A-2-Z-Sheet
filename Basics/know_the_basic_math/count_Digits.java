@@ -2,26 +2,45 @@
 
 public class count_Digits {
 
-    public static void countDigits(int n){
+    public static int countDigits(int n){
 
-        int count = 0;
+        // int count = 0;
         // n --> 12345
          
-        for( int i=0; i<=10;i++){
-
-            int mod = n%10;
+        // while(n>0){
+        //     n = n/10;
+        //     count =count +1;
             
+        // }
+        // System.out.println(count);
+
+    //  Optimal Approach
+    
+        // int cnt = (int) (Math.log10(n)+1);
+        // System.out.println(cnt);
+
+        int count = 0;
+        int originalNumber = n;
+
+        while (n > 0) {
+            int digit = n % 10;
+            if (digit != 0 && originalNumber % digit == 0) {
+                count++;
+            }
+            n /= 10;
         }
-        System.out.println(count);
 
-
+        return count;
         
     }
 
     public static void main(String[] args){
 
-        int n = 12345;
+        int n = 1234567890;
         countDigits(n);
-        System.out.println("hello");
+
+        int result = countDigits(n);
+        System.out.println(result);
+        
     }
 }
