@@ -13,11 +13,9 @@ public class Reverse_Integer {
         while(n >0){
             int lastDigit = n % 10;
 
-            // if(nums <Integer.MIN_VALUE /10 || nums > Integer.MAX_VALUE/10){
-
-                nums = (nums*10) + lastDigit;
+             if(nums <Integer.MIN_VALUE /10 || nums > Integer.MAX_VALUE/10)nums = (nums*10) + lastDigit;
                 n = n/10;
-            // }
+            
             
             
         }
