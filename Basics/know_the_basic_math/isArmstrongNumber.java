@@ -12,7 +12,7 @@ public class isArmstrongNumber{
             int ld = n % 10;
 
             sum += Math.pow(ld, k);
-            num = n /10;
+            n = n /10;
         }
         
         return num == sum ? true : false;
