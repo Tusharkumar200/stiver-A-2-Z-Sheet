@@ -1,6 +1,7 @@
 public class Find_GCD_of_two_numbers {
 
-    public static void GCD(int n1, int n2){
+    // Brute Force Approach
+    public static int BruteForce_GCD(int n1, int n2){
 
         //  n1 = 9 , n2 = 12
 
@@ -18,14 +19,34 @@ public class Find_GCD_of_two_numbers {
             }
         }
 
-        System.out.println(gcd);
-        // return 0;
+        
+        return gcd;
     }
     
+    // Optimal Approach
+
+    public static int Optimal_Approach_GCD(int n1, int n2){
+
+        while(n1 > 0 && n2 > 0){
+
+            if(n1 > n2){
+                n1 = n1 % n2;
+            }
+            else{
+                n2 = n2 % n1;
+            }
+        }
+
+        if(n1 == 0) return n2;
+        
+        return n1;
+    }
     public static void main(String[] args) {
         
-        int num1=9;
-        int num2=12;
-        GCD(num1, num2);
+        int num1=20;
+        int num2=15;
+        // BruteForce_GCD(num1, num2);
+        int result = Optimal_Approach_GCD(num1 , num2);
+        System.out.println(result);
     }
 }
