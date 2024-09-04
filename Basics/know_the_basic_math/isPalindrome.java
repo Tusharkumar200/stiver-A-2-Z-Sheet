@@ -6,28 +6,26 @@ Explanation: String when reversed is the same as string.
 
 
 public class isPalindrome {
-    
-    public static boolean checkPalindrome(String str){
+
+    static boolean palindrome(int i, String s){
         
-            String temp = str;
-            
-
-            for(char n = str.charAt(str.length() -1); n> .length();n++){
-
-                char lastChar = str.charAt(str.length() - 1);
-
-
-
-            }
-
-            
-        return false;
-    }
-    public static void main(String[] args) {
+        // Base Condition
+        // If i exceeds half of the string, means all the elements 
+        // are compared, we return true.
+        if(i>=s.length()/2) return true;
         
-        String str = "ABCDCBA";
+        // If start is not equal to end, not palindrome.
+        if(s.charAt(i)!=s.charAt(s.length()-i-1)) return false;
+        
+        // If both characters are same, increment i and check start+1 and end-1.
+        return palindrome(i+1,s);
+        
 
-        boolean result =checkPalindrome(str);
-        System.out.println(result);
-    }
+}
+public static void main(String[] args) {
+
+   // Example string.
+   String s = "madam";
+   System.out.println(palindrome(0,s));
+}
 }
