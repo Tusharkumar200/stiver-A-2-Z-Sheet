@@ -7,6 +7,8 @@ Explanation: String when reversed is the same as string.
 
 public class isPalindrome {
 
+    
+
     static boolean palindrome(int i, String s){
         
         // Base Condition
@@ -14,18 +16,19 @@ public class isPalindrome {
         // are compared, we return true.
         if(i>=s.length()/2) return true;
         
-        // If start is not equal to end, not palindrome.
+       
         if(s.charAt(i)!=s.charAt(s.length()-i-1)) return false;
         
-        // If both characters are same, increment i and check start+1 and end-1.
+       
         return palindrome(i+1,s);
         
 
 }
 public static void main(String[] args) {
 
-   // Example string.
-   String s = "madam";
+   
+//    String s = "race a car";
+   String s = "A man, a plan, a canal: Panama";
    System.out.println(palindrome(0,s));
 }
 }
