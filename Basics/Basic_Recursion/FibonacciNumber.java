@@ -23,7 +23,7 @@ public class FibonacciNumber {
     }
     public static void main(String[] args) {
         
-        int n = 11;
+        int n = 8;
         System.out.println(fib(n));
     }
 }
