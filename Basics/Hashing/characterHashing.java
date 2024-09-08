@@ -25,6 +25,7 @@ public class characterHashing {
                 // Fetching...
                 System.out.println(hash[c- 'a']);
             }
+            
         }
     }
 }
