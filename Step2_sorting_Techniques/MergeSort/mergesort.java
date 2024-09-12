@@ -46,6 +46,7 @@ public class mergesort {
         merge(arr, low, mid, high);
 
     }
+    
     public static void printArray(int arr[]){
         for (int i =0; i<arr.length; i++) {
             System.out.print(arr[i] + " ");
