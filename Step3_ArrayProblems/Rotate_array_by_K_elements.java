@@ -9,39 +9,33 @@
 
 public class Rotate_array_by_K_elements {
 
-    public static void rotateByK(int arr[], int n, int d) {
 
-        // int position = n - d;
-         d = d % n;
-        int temp[] = new int[d];
+    public static void reverse(int [] arr , int start , int end){
 
-        // Printing the array
+            while (start <= end) {
+                int temp = arr[start];
 
-        // for (int i = 0; i < size; i++) {
-        //     System.out.print(arr[i] + " ");
-        // }
+                arr[start] = arr[end];
+                arr[end] = temp;
 
+                start++;
+                end--;
+            }
+    }
 
-        for(int i = 0; i< d; i++){
-            temp[i] = arr[i];
-        }
+    public static void rotateByK(int arr[], int n, int k) {
 
-        // shifting  the array
+        reverse(arr, 0, k-1);
+        reverse(arr, k,n-1);
+        reverse(arr,0,n-1);
 
-        for (int j = d; j < n; j++) {
-            arr[j -d] = arr[j];
-        }
-
-        //  put back temp
-
-        for(int i = n-d ; i< n ; i++){
-            arr[i] = temp[i -(n - d)];
-        }
+         
+        
     }
 
     public static void main(String[] args) {
 
-        int arr[] = { 6, 7, 1, 2, 3, 4, 5 };
+        int arr[] = {  1, 2, 3, 4, 5 ,6,7};
         int size = arr.length;
         int k = 3;
         rotateByK(arr, size, k);
