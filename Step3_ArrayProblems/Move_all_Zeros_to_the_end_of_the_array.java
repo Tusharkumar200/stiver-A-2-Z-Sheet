@@ -13,19 +13,24 @@ public class Move_all_Zeros_to_the_end_of_the_array {
             }
         }
 
-        int tempLength = temp.size();
+        // int tempLength = temp.size();
 
-        // System.out.println(tempLength);
 
-        int nz = n - tempLength;
+        // int nz = n - tempLength;
+        int nz = temp.size();
 
         for(int i =0 ; i< nz ; i++){
 
-            temp.add(0);
+            // temp.add(0);
+            arr[i] = temp.get(i);
             
         }
+
+        for(int i = nz; i < n; i++){
+            arr[i] = 0;
+        }
         
-        for (int i : temp) {
+        for (int i : arr) {
             System.out.println(i);
         }
         
