@@ -15,7 +15,7 @@ public class Find_the_missing_number_in_an_array {
         return missingNum;
     }
     public static void main(String[] args) {
-        int arr[] = {1,2,4,5};
+        int arr[] = {1,2,4,5 };
         
         // int res = missingNumber(arr);
          int res = missingNumber(arr);
