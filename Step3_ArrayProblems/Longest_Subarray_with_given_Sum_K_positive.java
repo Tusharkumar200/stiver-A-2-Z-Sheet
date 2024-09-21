@@ -11,17 +11,42 @@ Example 2:
 
  */
 
+import java.util.HashMap;
+
 class Longest_Subarray_with_given_Sum_K_positive{
 
-    public static void Longest_Subarray(int []arr , int k){
+    public static int Longest_Subarray(int []arr , int k){
+        
+         HashMap<Integer, Integer> map = new HashMap<>();
+        int maxlen = 0;
+        int currentsum = 0;
 
+        for (int i = 0; i < arr.length; i++) {
+            currentsum += arr[i];
+
+            if (currentsum == k) {
+                maxlen = i + 1;
+            }
+
+            if (map.containsKey(currentsum - k)) {
+                maxlen = Math.max(maxlen, i - map.get(currentsum - k));
+            }
+
+            if (!map.containsKey(currentsum)) {
+                map.put(currentsum, i);
+            }
+        }
+
+        return maxlen;
     }
 
     public static void main(String[] args) {
         
         int arr[] = {2,3,5,1,9};
         int k = 10;
-        Longest_Subarray(arr , k);
+        int result = Longest_Subarray(arr , k);
+
+        System.out.println(result);
 
     }
 }
