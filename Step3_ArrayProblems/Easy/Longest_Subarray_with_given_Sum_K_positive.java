@@ -1,3 +1,5 @@
+package Easy;
+
 /*
 Example 1:
     Input Format: N = 3, k = 5, array[] = {2,3,5}
