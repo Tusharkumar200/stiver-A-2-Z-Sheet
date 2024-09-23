@@ -5,6 +5,26 @@ import java.util.Map;
 
 public class Majority_Element {
     
+    public static int Naive(int arr[]){
+        int n = arr.length;
+        
+        for (int i : arr) {
+            int count = 0;
+            
+            for (int j : arr) {
+                
+                if(j == i){
+                    count++;
+                }
+            }
+
+            if(count > (n/2))
+                return i;
+        }
+
+        return -1;
+    }
+    // better approched
     public static int  majority(int num[]){
            
         int n = num.length;
@@ -23,11 +43,17 @@ public class Majority_Element {
         }
         return -1;
     }
+    
+    
     public static void main(String[] args) {
-        int  nums[] = {3,2,3,2,2};
-        int res = majority(nums);
+        int  nums[] = {2, 2, 1, 1, 1, 2, 2};
 
-        System.out.println(res);
+        // int res = majority(nums);
+        // System.out.println(res);
+
+        int resNive = Naive(nums);
+        System.out.println(resNive);
+
         
     }
 }
