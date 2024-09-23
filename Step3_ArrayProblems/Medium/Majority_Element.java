@@ -45,14 +45,40 @@ public class Majority_Element {
     }
     
     
+    public static int optimal(int arr[]){
+            int n = arr.length;
+            int ctn = 0;
+            int el = 0;
+
+            for (int i : arr) {
+                
+                if(ctn == 0){
+                    ctn = 1;
+                    el = i;
+                }
+                else if( el == i) ctn++;
+                else ctn--;
+            }
+
+            int cnt1 = 0;
+
+            for(int j : arr){
+                if(j == el) cnt1++;
+             }
+
+             if(cnt1 > (n/2)) return el;
+        return -1;
+    }
     public static void main(String[] args) {
         int  nums[] = {2, 2, 1, 1, 1, 2, 2};
 
         // int res = majority(nums);
         // System.out.println(res);
 
-        int resNive = Naive(nums);
-        System.out.println(resNive);
+        // int resNive = Naive(nums);
+        // System.out.println(resNive);
+        int resNive2 = optimal(nums);
+        System.out.println(resNive2);
 
         
     }
