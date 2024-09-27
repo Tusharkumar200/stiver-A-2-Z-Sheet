@@ -1,3 +1,4 @@
+package Easy;
 import java.util.Arrays;
 
 class Find_the_Largest_element_in_an_array{

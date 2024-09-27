@@ -3,7 +3,7 @@
 
 *Output: [2, 3, 4, 5, 1]
  */
-
+package Easy;
 public class Left_Rotate_an_Array_by_One {
     
     public static void rotate(int arr[]){

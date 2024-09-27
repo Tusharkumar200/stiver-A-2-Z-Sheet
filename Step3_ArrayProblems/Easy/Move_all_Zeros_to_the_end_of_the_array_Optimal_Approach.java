@@ -1,4 +1,4 @@
-
+package Easy;
 class Move_all_Zeros_to_the_end_of_the_array_Optimal_Approach {
 
     public static int[] moveZeros(int n, int[] a) {

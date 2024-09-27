@@ -1,3 +1,5 @@
+package Easy;
+
 import java.util.ArrayList;
 
 public class Move_all_Zeros_to_the_end_of_the_array {

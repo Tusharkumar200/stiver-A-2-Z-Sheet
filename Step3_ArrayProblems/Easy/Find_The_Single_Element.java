@@ -1,3 +1,5 @@
+package Easy;
+
 public class Find_The_Single_Element {
     
 

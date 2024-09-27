@@ -1,3 +1,5 @@
+package Easy;
+
 public class Find_the_missing_number_in_an_array {
     
     public static int  missingNumber(int a[] ){

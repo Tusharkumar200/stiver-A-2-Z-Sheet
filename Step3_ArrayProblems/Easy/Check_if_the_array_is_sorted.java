@@ -1,3 +1,5 @@
+package Easy;
+
 import java.util.Arrays;
 
 public class Check_if_the_array_is_sorted {
