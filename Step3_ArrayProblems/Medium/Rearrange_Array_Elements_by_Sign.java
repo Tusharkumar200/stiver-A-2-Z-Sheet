@@ -4,7 +4,7 @@ public class Rearrange_Array_Elements_by_Sign{
 
     public static int[] reArrange(int[]arr){
         int n = arr.length/2;
-
+        
         int pos[] = new int[n];
         int neg[] = new int[n];
         int posIndex = 0;
