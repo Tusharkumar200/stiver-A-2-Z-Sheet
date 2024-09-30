@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Leaders_in_an_Array {
 
+    // BruteForce Approched 
     public static ArrayList<Integer> printLeader(int[] arr) {
         int n = arr.length;
 
@@ -28,18 +29,33 @@ public class Leaders_in_an_Array {
         return ans;
     }
 
+    
+    public static ArrayList<Integer> optimalPring(int[] arr , int n){
+        
+        
+        ArrayList<Integer> ans = new ArrayList<>();
+        
+        int max = arr[n-1];
+        ans.add(max);
+
+        for(int i= n-1 ; i>=0 ; i--){
+            if (arr[i] > max) {
+                ans.add(arr[i]);
+                max = arr[i];
+              }
+        }
+
+        return ans;
+        
+    }
     public static void main(String[] args) {
         int arr[] = { 10, 22, 12, 3, 0, 6 };
-
-        System.out.println(printLeader(arr));
+        int n = arr.length;
+        
+        // System.out.println(printLeader(arr));
+        System.out.println(optimalPring(arr,n));
         
 
-
-        // ArrayList<Integer> ans = printLeader(arr);
-
-        // for (int i = 0; i < ans.size(); i++) {
-        //     System.out.print(ans.get(i) + " ");
-        // }
 
     }
 }
