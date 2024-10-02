@@ -2,7 +2,8 @@ package Medium;
 
 public class Count_Subarray_Sum_Equals_K {
     
-// 
+// Better Approched!
+
     public static int  countSubarray(int[] arr, int k){
 
 
