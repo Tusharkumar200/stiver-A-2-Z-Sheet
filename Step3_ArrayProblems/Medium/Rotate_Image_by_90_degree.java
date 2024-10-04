@@ -21,7 +21,7 @@ public class Rotate_Image_by_90_degree {
         
         int arr[][] =  {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         
-        int rotated[][] = rotate(arr);
+        int rotated[][] =  rotate(arr);
         System.out.println("Rotated Image");
         for (int i = 0; i < rotated.length; i++) {
             for (int j = 0; j < rotated.length; j++) {
