@@ -24,7 +24,7 @@ public class Spiral_Traversal_of_Matrix {
             right--;
 
             if (top <= bottom) {
-                for (int i = right; i > left; i--) {
+                for (int i = right; i >= left; i--) {
                     ans.add(mat[bottom][i]);
                 }
             }
@@ -40,11 +40,13 @@ public class Spiral_Traversal_of_Matrix {
     }
 
     public static void main(String[] args) {
-        int[][] mat = {
-             { 1, 2, 3, 4 },
-             { 5, 6, 7, 8 },
-             { 9, 10, 11,12 },
-             { 13, 14, 15,16 } };
+        // int[][] mat = {
+        //      { 1, 2, 3, 4 },
+        //      { 5, 6, 7, 8 },
+        //      { 9, 10, 11,12 },
+        //      { 13, 14, 15,16 } };
+
+        int mat[][] = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
         List<Integer> ans = printSpiral(mat);
 
