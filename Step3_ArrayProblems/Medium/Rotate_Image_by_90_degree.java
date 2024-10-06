@@ -20,8 +20,7 @@ public class Rotate_Image_by_90_degree {
     public static void optimal_rotate(int[][] matrix){
         
 
-       
-
+        
 
         for(int i=0; i<matrix.length; i++){
 
@@ -36,7 +35,10 @@ public class Rotate_Image_by_90_degree {
        
 
         for(int i=0; i<matrix.length; i++){
+           
             reverse(matrix[i]);
+            
+
         }
        
 
