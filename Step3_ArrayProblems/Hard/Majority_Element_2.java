@@ -8,7 +8,7 @@ public class Majority_Element_2 {
 
     }
     public static void main(String[] args) {
-        int n = 6;
+        
         int arr[] = {11,33,33,11,33,11};
         Majority(arr);
     }
