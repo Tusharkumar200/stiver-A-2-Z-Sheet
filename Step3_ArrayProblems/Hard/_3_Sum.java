@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class _3_Sum{
 
-    // Brute force approach using 3 loops 
+    // * Brute force approach using 3 loops 
     public static List<List<Integer>> triplet(int n, int[] arr){
         Set<List<Integer>> st = new HashSet<>();
 
@@ -27,7 +27,7 @@ public class _3_Sum{
         return ans;
     }
 
-    // Better approach 
+    //* Better approach 
     public static List<List<Integer>> triplet_Better_Approach(int n, int[] arr){
 
         Set<List<Integer>> st = new HashSet<>();
@@ -48,6 +48,11 @@ public class _3_Sum{
         }
         List<List<Integer>> ans = new ArrayList<>(st);
         return ans;
+    }
+    
+    // * Optimal approach
+    public static List<List<Integer>> triplet_optimal_Approach(int n, int[]arr){
+
     }
     public static void main(String[] args) { int[] arr = { -1, 0, 1, 2, -1, -4};
     int n = arr.length;
