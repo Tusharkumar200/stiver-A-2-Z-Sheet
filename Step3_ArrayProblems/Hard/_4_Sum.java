@@ -43,7 +43,7 @@ public class _4_Sum {
 
 
     //  *Better Approched using fornula(a+b +c=0 --> -c = a+b);
-    public static List<List<Integer>> fourSumBetterApproched(int[] nums, int target){
+    public static List<List<Integer>> fourSum_BetterApproched(int[] nums, int target){
 
         int n = nums.length; // size of the array
         Set<List<Integer>> st = new HashSet<>();
@@ -72,6 +72,12 @@ public class _4_Sum {
         }
         List<List<Integer>> ans = new ArrayList<>(st);
         return ans;
+    }
+    
+    
+    // * Optimal approched
+    public static List<List<Integer>> fourSum_OptimalApproched(int[] nums, int target){
+
     }
     public static void main(String[] args) {
        int[] nums = {4, 3, 3, 4, 4, 2, 1, 2, 1, 1};
