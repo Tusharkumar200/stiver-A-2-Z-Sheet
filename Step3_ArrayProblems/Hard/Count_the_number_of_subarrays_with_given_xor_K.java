@@ -36,7 +36,7 @@ public class Count_the_number_of_subarrays_with_given_xor_K{
             for(int i=0; i<n; i++){
                 xr = xr ^ arr[i];
                 int x = xr ^ k;
-
+                
                 if(map.containsKey(x)){
                     count += map.get(x);
                 }
