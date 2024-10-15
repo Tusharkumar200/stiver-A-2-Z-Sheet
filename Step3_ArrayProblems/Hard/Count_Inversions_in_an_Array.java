@@ -1,6 +1,6 @@
 public class Count_Inversions_in_an_Array {
     
-    // Brute Force 
+    // Brute Force (O(N^2))
 
     public static int numberOfInversions(int[] arr, int n){
         int count =0;
