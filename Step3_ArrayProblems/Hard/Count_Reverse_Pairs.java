@@ -62,27 +62,41 @@ public class Count_Reverse_Pairs {
         }
     }
 
-    public static void countPairsOptimal(int[] arr, int low, int mid, int high){
-        
+    public static int  countPairsOptimal(int[] a, int low, int mid, int high){
+        int count = 0;
+        int right = mid + 1;
+
+        for(int i=low; i<=mid; i++){
+
+            while(right<=high && a[i] > 2*a[right]){
+                right++;
+            }
+            count += right - (mid + 1);
+        }
+        return count;
     }
 
-    public static void mergeSort(int[] arr, int low, int high) {
-        if (low >= high) return;
+    public static int mergeSort(int[] arr, int low, int high) {
+        int count =0;
+        if (low >= high) return count;
         int mid = (low + high) / 2 ;
-        mergeSort(arr, low, mid);  // left half
-        mergeSort(arr, mid + 1, high); // right half
-        countPairsOptimal(arr, low, mid, high);  // merging sorted halves
+        count += mergeSort(arr, low, mid);  // left half
+        count += mergeSort(arr, mid + 1, high); // right half
+        count += countPairsOptimal(arr, low, mid, high);  // merging sorted halves
         merge(arr, low, mid, high);  // merging sorted halves
+        return count;
     }
 
     public static int teamOptimal(int[] skill, int n) {
-         mergeSort(skill,0, n-1);
+         return mergeSort(skill,0, n-1);
+         
     }
     public static void main(String[] args) {
         
         int[] a = {4, 1, 2, 3, 1};
         int n = 5;
-        int result = team(a, n);
+        // int result = team(a, n);
+        int result = teamOptimal(a, n);
         System.out.println(result);
 
     }
