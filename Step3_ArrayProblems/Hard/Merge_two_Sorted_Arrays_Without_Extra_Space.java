@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Merge_two_Sorted_Arrays_Without_Extra_Space {
     
+    // * BruteForce Approched
     public static void merge(long[] arr1, long[] arr2, int n, int m) {
         int left = n-1;
         int right = 0; 
