@@ -1,4 +1,4 @@
-package Hard;
+
 
 public class Maximum_Product_Subarray_in_an_Array {
 
