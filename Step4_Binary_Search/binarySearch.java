@@ -3,7 +3,7 @@ package Step4_Binary_Search;
 public class binarySearch {
 
     public static int showBinarySearch(int[]arr , int target){
-        
+            int n = arr
     }
 
     public static void main(String[] args) {
