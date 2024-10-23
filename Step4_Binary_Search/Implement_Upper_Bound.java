@@ -24,11 +24,11 @@ public static int[]upper_bond(int[]arr , int x){
     }
     public static void main(String[] args) {
         
-       int arr[] = {3,5,8,9,15,19}, x = 9;
+       int arr[] = {5, 6, 8, 9, 6, 5, 5, 6}, x = 7;
        int[] result =  upper_bond(arr, x);
        
        for (int i : result) {
-            System.out.println(" "+i);
+            System.out.print(" "+i);
        }
     }
 }
