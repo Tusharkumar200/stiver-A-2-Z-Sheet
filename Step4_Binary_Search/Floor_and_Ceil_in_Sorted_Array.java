@@ -38,13 +38,16 @@ public class Floor_and_Ceil_in_Sorted_Array {
     }
 
     public static int[] getFloorAndCeil(int[] a, int n, int x) {
-
+                   int f = findFloor(a, n, x);
+                   int c = findCeil(a, n, x);
+                   return new int[] {f,c};
     }
     public static void main(String[] args) {
         int n = 6;
         int  arr[] ={3, 4, 4, 7, 8, 10};
         int  x= 5;
         getFloorAndCeil(arr,n,x);
-
+        int[] ans = getFloorAndCeil(arr, n, x);
+        System.out.println("The floor and ceil are: " + ans[0] + " " + ans[1]);
     }
 }
