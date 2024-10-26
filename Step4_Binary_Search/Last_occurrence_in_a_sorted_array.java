@@ -1,16 +1,20 @@
 public class Last_occurrence_in_a_sorted_array {
     
-    public static int firstOccurrence(int[] arr, int n, int k) {
-        
-    }
-
-    public static int lastOccurrence(int[] arr, int n, int k) {
+    private static int findFirstPosition(int[] nums, int target) {
 
     }
+
+    private static int findLastPosition(int[] nums, int target) {
+
+    }
+
+    public static int[] searchRange(int[] nums, int target) {
+
+    }
+    
     public static void main(String[] args) {
-        int[] arr =  {2, 4, 6, 8, 8, 8, 11, 13};
-        int n = 8, x = 8;
-        int ans = count(arr, n, x);
-        System.out.println("The number of occurrences is: " + ans);
+        int[] nums1 = {5, 7, 7, 8, 8, 10};
+        int target1 = 8;
+        System.out.println(Arrays.toString(searchRange(nums1, target1))); // Output: [3, 4]
     }
 }
