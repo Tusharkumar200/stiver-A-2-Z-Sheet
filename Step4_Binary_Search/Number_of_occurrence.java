@@ -57,6 +57,14 @@ public class Number_of_occurrence {
         return last;
     }
 
+    public static int[] firstLastOccurrence(int []arr, int n, int x){
+        int first = firstOccurrence(null, n, x);
+        if (first == -1) return new int[] { -1, -1};
+        int last = lastOccurrence(null, n, x);
+        return new int[] {first, last};
+    }
+
+    
     public static void main(String[] args) {
         int X = 2;
         int array[] = { 2, 2, 3, 3, 3, 3, 4 };
