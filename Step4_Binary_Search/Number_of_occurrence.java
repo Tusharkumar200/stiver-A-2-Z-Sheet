@@ -13,8 +13,8 @@ public class Number_of_occurrence {
     }
     // * binary search
 
-    public static int firstOccurrence(int[] arr, int n, int k) {
-        int n = arr.length;
+    public static int firstOccurrence(int[] arr, int n, int x) {
+        
         int left = 0;
         int right = n - 1;
         int first = -1;
@@ -35,13 +35,26 @@ public class Number_of_occurrence {
     }
 
     public static int lastOccurrence(int[] arr, int n, int k) {
-        int n = arr.length;
+        
         int left = 0;
         int right = n - 1;
-        int first = -1;
+        int last = -1;
         while (left <= right) {
             int mid = (left + right) / 2;
+
+            if(arr[mid] == k){
+                last = mid;
+                left = mid +1;
+            }
+            else if(arr[mid] < k){
+                left = mid +1;
+            }
+            else{
+                right = mid - 1;
+            }
         }
+
+        return last;
     }
 
     public static void main(String[] args) {
