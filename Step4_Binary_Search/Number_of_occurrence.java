@@ -58,17 +58,22 @@ public class Number_of_occurrence {
     }
 
     public static int[] firstLastOccurrence(int []arr, int n, int x){
-        int first = firstOccurrence(null, n, x);
+        int first = firstOccurrence(arr, n, x);
         if (first == -1) return new int[] { -1, -1};
-        int last = lastOccurrence(null, n, x);
+        int last = lastOccurrence(arr, n, x);
         return new int[] {first, last};
     }
+    public static int count(int arr[], int n, int x) {
+        int[] ans = firstLastOccurrence(arr, n, x);
+        if (ans[0] == -1) return 0;
+        return (ans[1] - ans[0] + 1);
+    }
 
-    
     public static void main(String[] args) {
-        int X = 2;
+        int x = 1;
         int array[] = { 2, 2, 3, 3, 3, 3, 4 };
-        int result = countOccurrence(array, X);
+        int n = array.length;
+        int result = count(array, n, x);
         System.out.println(result);
     }
 }
