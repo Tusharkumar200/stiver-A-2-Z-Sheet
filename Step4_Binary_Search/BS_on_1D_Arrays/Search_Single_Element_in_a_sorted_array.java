@@ -1,3 +1,4 @@
+package BS_on_1D_Arrays;
 public class Search_Single_Element_in_a_sorted_array {
     
 

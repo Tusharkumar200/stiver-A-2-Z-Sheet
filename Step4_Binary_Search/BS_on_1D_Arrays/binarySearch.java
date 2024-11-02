@@ -1,3 +1,4 @@
+package BS_on_1D_Arrays;
 public class binarySearch {
 
     public static int showBinarySearch(int[]arr , int target){

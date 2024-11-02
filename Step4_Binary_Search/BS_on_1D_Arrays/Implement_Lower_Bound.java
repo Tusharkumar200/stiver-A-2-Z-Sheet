@@ -1,3 +1,4 @@
+package BS_on_1D_Arrays;
 public class Implement_Lower_Bound {
     
     public static int lowerBound(int[]arr, int n, int x){

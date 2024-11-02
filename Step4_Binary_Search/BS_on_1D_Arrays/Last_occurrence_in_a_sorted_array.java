@@ -1,3 +1,4 @@
+package BS_on_1D_Arrays;
 public class Last_occurrence_in_a_sorted_array {
     
     private static int findFirstPosition(int[] nums, int target) {

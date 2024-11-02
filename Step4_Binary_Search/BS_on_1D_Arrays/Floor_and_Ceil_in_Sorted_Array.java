@@ -1,3 +1,4 @@
+package BS_on_1D_Arrays;
 public class Floor_and_Ceil_in_Sorted_Array {
     
     static int findFloor(int[] arr, int n, int x) {

@@ -1,3 +1,4 @@
+package BS_on_1D_Arrays;
 public class Number_of_occurrence {
 
     public static int countOccurrence(int arr[], int x) {
