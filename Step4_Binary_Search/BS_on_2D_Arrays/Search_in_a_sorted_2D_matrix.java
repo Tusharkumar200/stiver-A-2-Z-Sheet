@@ -5,8 +5,24 @@ import java.util.Arrays;
 
 public class Search_in_a_sorted_2D_matrix {
     
-    public static boolean searchMatrix(int[][]mat, int target){
+    public static boolean searchMatrix(ArrayList<ArrayList<Integer>>mat, int target){
 
+        int m = mat.size();
+        int n = mat.get(0).size();
+
+        int low =0 , heigh = n*m-1;
+
+        while(low <= heigh){
+            int mid = (low + heigh)/2;
+            int row = mid / m;
+            int col = mid % m;
+
+            if(mat.get(row).get(col) == target) return true;
+            else if(mat.get(row).get(col) < target) low = mid + 1;
+            else heigh = mid - 1;
+            
+        }
+        
         return false;
     }
     public static void main(String[] args) {
