@@ -1,6 +1,7 @@
 package BS_on_2D_Arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Find_a_Peak_Element2 {
 
@@ -16,7 +17,7 @@ public class Find_a_Peak_Element2 {
         return index;
     }
     
-    static int fndPeakGrid(ArrayList<ArrayList<Integer>>mat){
+    static int[] fndPeakGrid(ArrayList<ArrayList<Integer>>mat){
             int n = mat.size();
             int m = mat.get(0).size();
             int low =0, heigh= m -1;
@@ -25,9 +26,9 @@ public class Find_a_Peak_Element2 {
                 int mid = (low + heigh)/2;
                 int maxRowIndex = findMaxIndex(mat, n, m, mid);
                 int left = mid -1 >=0 ? mat.get(maxRowIndex).get(mid -1): -1;
-                int right = mid +1 <0 ? mat.get(maxRowIndex).get(mid +1): -1;
+                int right = mid +1 < m ? mat.get(maxRowIndex).get(mid +1): -1;
                 if(mat.get(maxRowIndex).get(mid) > left && mat.get(maxRowIndex).get(mid) > right){
-                    return {maxRowIndex , mid};
+                    return new int[]{maxRowIndex , mid};
                 }
                 else if(mat.get(maxRowIndex).get(mid) < left){
                     heigh = mid -1;
@@ -36,10 +37,16 @@ public class Find_a_Peak_Element2 {
                     low = mid + 1;
                 }
             }
-            return {-1,-1};
+            return new int[]{-1, -1};
     }
     public static void main(String[] args) {
-        int mat = {{1,4},{3,2}};
-        int
+        ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
+        // int mat = {{1,4},{3,2}};
+         matrix.add(new ArrayList<>(Arrays.asList(1, 2, 3, 4)));
+        matrix.add(new ArrayList<>(Arrays.asList(5, 6, 7, 8)));
+        matrix.add(new ArrayList<>(Arrays.asList(9, 10, 11, 12)));
+        int[] result = fndPeakGrid(matrix);
+        System.out.println(Arrays.toString(result));
+        
     }
 }
