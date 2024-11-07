@@ -1,10 +1,20 @@
 package BS_on_2D_Arrays;
 
+import java.util.*;
+
 public class Median_of_Row_Wise_Sorted_Matrix {
     
-    public static int median(int[]matrix, int m, int n){
+    public static int median(int[][] matrix, int m, int n){
+        //* Linear Search -T.C ->  O(MXN) + O(MXN(log(MXN)))
+        List <Integer> lst = new ArrayList<>();
 
-        return -1;
+        for(int i=0; i< m; i++){
+            for(int j=0; j< n; j++){
+                lst.add(matrix[i][j]);
+            }
+        }
+        Collections.sort(lst);
+        return lst.get((m * n)/2 );
     }
     public static void main(String[] args) {
         int matrix[][] = {
