@@ -1,5 +1,18 @@
 public class Koko_Eating_Bananas {
     
+    public static int findMax(int[] v) {
+        int maxi = Integer.MIN_VALUE;
+        int n = v.length;
+
+        for(int i=0; i<n ; i++){
+            maxi = Math.max(maxi, v[i]);
+        }
+        return maxi;
+    }
+
+    public static int calculateTotalHours(int[] v, int hourly) {
+        
+    }
     public static int minimumRateToEatBananas(int[] v, int h) {
         
         return 0;
