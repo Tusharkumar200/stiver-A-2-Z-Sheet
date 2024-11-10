@@ -2,8 +2,12 @@ public class Kth_Missing_Positive_Number {
     
 
     public static int missingK(int arr[], int n, int k){
-
-        return 0;
+        //* Linear Search
+        for(int i: arr){
+            if(i <= k) k++;
+            else break;
+        }
+        return k;
     }
     public static void main(String[] args) {
         int[] vec = {4, 7, 9, 10};
