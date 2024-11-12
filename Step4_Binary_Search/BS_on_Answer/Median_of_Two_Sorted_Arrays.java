@@ -1,3 +1,4 @@
+package BS_on_Answer;
 
 public class Median_of_Two_Sorted_Arrays{
 
@@ -8,7 +9,7 @@ public class Median_of_Two_Sorted_Arrays{
         if (n1 > n2) return median(b, a);
 
         int n = n1 + n2;
-        int left = (n1 + n2 + 1) / 2
+        int left = (n1 + n2 + 1) / 2;
         int low  =0;
         int high = n1;
 
@@ -22,7 +23,21 @@ public class Median_of_Two_Sorted_Arrays{
             int r1 = (mid1 < n1)? a[mid1]: Integer.MAX_VALUE;
             int r2 = (mid2 < n2)? b[mid2]: Integer.MAX_VALUE;
 
-            
+            if( l1 <= r2 && l2 <= r1){
+
+                if( n % 2 ==1 ){
+                    return Math.max(l1, l2);
+                }
+                 else{
+                    return ((double) (Math.max(l1,l2) + Math.min(r1, r2)))/2.0;
+                }
+            }   
+            else if(l1 > r2){
+                high = mid1 - 1;
+            }
+            else{
+                low = mid1 + 1;
+            }
         }
 
         return 0;
