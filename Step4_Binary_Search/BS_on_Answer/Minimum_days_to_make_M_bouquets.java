@@ -1,7 +1,23 @@
 public class Minimum_days_to_make_M_bouquets {
     
+    public static boolean possible(int[] arr, int day, int m, int k) {
+        int n = arr.length;
+        int cnt =0;
+        int nOfB =0;
+        for(int i=0; i<n; i++){
+            if(arr[i] <= day) cnt++;
+            else {
+                nOfB = cnt/k;
+                cnt = 0;
+            }
+
+        }
+        nOfB  =cnt/k;
+        return noOfB >= m;  
+    }
     public static int roseGarden(int[] arr, int k, int m) {
         
+        return 0;
     }
 
     public static void main(String[] args) {
