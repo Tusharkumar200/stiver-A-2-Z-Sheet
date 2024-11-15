@@ -6,6 +6,7 @@ public class Aggressive_Cows {
         return false;
     }
     public static int aggressiveCows(int[] stalls, int k) {
+        
         return 0;
     }
     public static void main(String[] args) {
