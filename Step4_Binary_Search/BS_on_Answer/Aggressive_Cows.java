@@ -1,7 +1,10 @@
 package BS_on_Answer;
 
 public class Aggressive_Cows {
-    
+    public static boolean canWePlace(int[] stalls, int dist, int cows) {
+
+        return false;
+    }
     public static int aggressiveCows(int[] stalls, int k) {
         return 0;
     }
