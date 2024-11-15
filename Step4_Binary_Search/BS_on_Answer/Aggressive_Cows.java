@@ -3,7 +3,7 @@ package BS_on_Answer;
 import java.util.Arrays;
 
 public class Aggressive_Cows {
-    public static boolean canWePlace(int[] stalls, int dist, int cows) {
+    public static boolean cowePlace(int[] stalls, int dist, int cows) {
 
         int n = stalls.length;
         int cntCow = 1;
@@ -29,7 +29,7 @@ public class Aggressive_Cows {
         while(low <= high){
             int mid = (low + high)/2;
 
-            if(canWePlace(stalls, mid, k) == true){
+            if(cowePlace(stalls, mid, k) == true){
                 low = mid + 1;
 
             }else{
@@ -41,8 +41,10 @@ public class Aggressive_Cows {
         return high;
     }
     public static void main(String[] args) {
-        int[] stalls = {0, 3, 4, 7, 10, 9};
-        int k = 4;
+        // int[] stalls = {0, 3, 4, 7, 10, 9};
+        int[] stalls = {1,2,3,4,7};
+        // int k = 4;
+        int k = 3;
         int ans = aggressiveCows(stalls, k);
         System.out.println("The maximum possible minimum distance is: " + ans);
     }
