@@ -1,3 +1,5 @@
+package BS_on_Answer;
+
 public class Minimise_Maximum_Distance_between_Gas_Stations {
 
     public static int numberOfGasStationsRequired(double dist, int[] arr) {
