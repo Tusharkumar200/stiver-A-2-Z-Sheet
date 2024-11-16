@@ -1,5 +1,7 @@
 package BS_on_Answer;
 
+//* problem book allocation and Painter's Partion is base on same concept.
+
 public class Split_Array_Largest_Sum {
 
     public static int countPartitions(int[] a, int maxSum) {
