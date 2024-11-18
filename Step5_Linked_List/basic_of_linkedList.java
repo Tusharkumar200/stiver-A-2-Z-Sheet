@@ -30,11 +30,38 @@ public class basic_of_linkedList {
 
 
     }
+
+    private static int lengthOfLL(Node head){
+        int count =0;
+        Node temp = head; // use to save the orignal head;
+
+        while(temp != null){
+
+            System.out.println(temp.data);
+            temp = temp.next;
+            count++;
+        }
+        return count;
+    }
     
     public static void main(String[] args) {
         int []arr = {10,20,30,40,50};
-        Node y = new Node(arr[2]);
-        System.out.println(y.data);
+
+        // Node y = new Node(arr[2]);
+        // System.out.println(y.data);
+
+        Node head = convertarr2LL(arr);
+        System.out.println(head.data );
+
+        Node temp = head;
+        while(temp != null){
+            System.out.print ( temp.data + " -> ");
+            temp = temp.next;
+        }
+
+        // Length of the LL
+        int len = lengthOfLL(head);
+        System.out.println("length = "+len);
 
     }
 }
