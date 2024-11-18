@@ -43,6 +43,14 @@ public class basic_of_linkedList {
         }
         return count;
     }
+    static boolean searchKey( Node head, int key) {
+        
+        while(head != null){
+            if(head.data == key) return true;
+            head = head.next;
+        }
+        return false;
+    }
     
     public static void main(String[] args) {
         int []arr = {10,20,30,40,50};
@@ -62,6 +70,9 @@ public class basic_of_linkedList {
         // Length of the LL
         int len = lengthOfLL(head);
         System.out.println("length = "+len);
+
+        boolean search = searchKey(head, 40);
+        System.out.println(search);
 
     }
 }
