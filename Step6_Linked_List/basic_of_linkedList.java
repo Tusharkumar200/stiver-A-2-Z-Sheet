@@ -53,7 +53,7 @@ public class basic_of_linkedList {
     }
 
     public static Node RemoveHead(Node head){
-
+        
         return head;
     }
     
