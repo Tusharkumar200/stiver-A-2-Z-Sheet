@@ -53,7 +53,8 @@ public class basic_of_linkedList {
     }
 
     public static Node RemoveHead(Node head){
-        
+        if(head == null) return head;
+        head = head.next;
         return head;
     }
     
@@ -78,6 +79,12 @@ public class basic_of_linkedList {
 
         boolean search = searchKey(head, 40);
         System.out.println(search);
+        
+        // Remove the Head
+         head = RemoveHead(head);
+        
+        System.out.println(head.data +" ");
+         
 
     }
 }
