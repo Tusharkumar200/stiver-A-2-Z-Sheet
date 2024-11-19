@@ -51,6 +51,11 @@ public class basic_of_linkedList {
         }
         return false;
     }
+
+    public static Node RemoveHead(Node head){
+
+        return head;
+    }
     
     public static void main(String[] args) {
         int []arr = {10,20,30,40,50};
