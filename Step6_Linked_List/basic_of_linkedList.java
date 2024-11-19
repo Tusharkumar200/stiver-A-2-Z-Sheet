@@ -1,4 +1,4 @@
-package Step5_Linked_List;
+package Step6_Linked_List;
 
 class Node{
 
