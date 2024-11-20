@@ -58,6 +58,15 @@ public class basic_of_linkedList {
         head = head.next;
         return head;
     }
+    public static Node RemoveTail(Node head){
+
+        if(head == null || head.next == null) return head;
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        return temp;
+    }
     
     public static void main(String[] args) {
         int []arr = {10,20,30,40,50};
@@ -82,9 +91,11 @@ public class basic_of_linkedList {
         System.out.println(search);
         
         // Remove the Head
-         head = RemoveHead(head);
+        // head = RemoveHead(head);
+         head = RemoveTail(head);
         
-        System.out.println(head.data +" ");
+        System.out.println(head.data +" tail removed");
+        
          
 
     }
