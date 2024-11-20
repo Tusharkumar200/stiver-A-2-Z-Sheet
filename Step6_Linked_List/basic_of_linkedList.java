@@ -43,6 +43,7 @@ public class basic_of_linkedList {
         }
         return count;
     }
+    
     static boolean searchKey( Node head, int key) {
         
         while(head != null){
