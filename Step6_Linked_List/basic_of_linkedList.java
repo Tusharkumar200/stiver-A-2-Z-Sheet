@@ -124,6 +124,23 @@ public class basic_of_linkedList {
         return head;
     }
 
+    public static Node insertHead(Node head , int val){
+        Node temp = new Node(val, head);
+        return temp; 
+    }
+
+    public static Node insertTail(Node head, int val){
+        if(head == null){
+            return new Node(val);
+        }
+        Node temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        Node newNode = new Node(val);
+        temp.next = newNode;
+        return head;
+    }
     public static void main(String[] args) {
         int []arr = {10,20,30,40,50};
 
