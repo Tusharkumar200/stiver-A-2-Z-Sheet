@@ -18,6 +18,7 @@ class Node{
 public class basic_of_linkedList {
 
     private static Node  convertarr2LL(int arr[]){
+        if(arr.length == 0) return null;
         Node head = new Node(arr[0]);
         Node mover = head;
 
@@ -53,11 +54,14 @@ public class basic_of_linkedList {
         return false;
     }
 
+    
+    //* Deletion in the Linklist. 
     public static Node RemoveHead(Node head){
         if(head == null) return head;
         head = head.next;
         return head;
     }
+    
     public static Node RemoveTail(Node head){
 
         if(head == null || head.next == null) return head;
@@ -65,9 +69,61 @@ public class basic_of_linkedList {
         while (temp.next.next != null) {
             temp = temp.next;
         }
-        return temp;
+        return head;
     }
     
+    public static Node RemoveK(Node head , int k){
+        if(head == null)return head;
+        if(k == 1){
+            Node temp = head;
+            temp = temp.next;
+            return head;
+        }
+
+        int count = 0;
+        Node temp  = head;
+        Node prev = null;
+
+        while(temp != null){
+            count++;
+
+            if(count == k){
+                prev.next = prev.next.next;
+                break;
+            }
+            prev = temp;
+            temp = temp.next;
+
+        }
+        return head;
+    }
+
+    public static Node RemoveElement(Node head , int el){
+        if(head == null)return head;
+        if(head.data == el){
+            Node temp = head;
+            temp = temp.next;
+            return head;
+        }
+
+        
+        Node temp  = head;
+        Node prev = null;
+
+        while(temp != null){
+            
+
+            if(temp.data == el){
+                prev.next = prev.next.next;
+                break;
+            }
+            prev = temp;
+            temp = temp.next;
+
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
         int []arr = {10,20,30,40,50};
 
@@ -75,28 +131,38 @@ public class basic_of_linkedList {
         // System.out.println(y.data);
 
         Node head = convertarr2LL(arr);
-        System.out.println(head.data );
+        // System.out.println(head.data );
 
-        Node temp = head;
-        while(temp != null){
-            System.out.print ( temp.data + " -> ");
-            temp = temp.next;
-        }
+        // Node temp = head;
+        // while(temp != null){
+        //     System.out.print ( temp.data + " -> ");
+        //     temp = temp.next;
+        // }
 
         // Length of the LL
         int len = lengthOfLL(head);
         System.out.println("length = "+len);
 
-        boolean search = searchKey(head, 40);
-        System.out.println(search);
+        // boolean search = searchKey(head, 40);
+        // System.out.println(search);
         
         // Remove the Head
         // head = RemoveHead(head);
-         head = RemoveTail(head);
+        // Remove tail
+        //  head = RemoveTail(head);
         
-        System.out.println(head.data +" tail removed");
+        // System.out.println(head.data +" tail removed");
+
+         head = RemoveK(head, 2);
+        System.out.println(head +" k elment removed ");
+
+        head = RemoveElement(head , 20);
+        System.out.println(head);
         
-         
+        
+        
 
     }
+
+    
 }
