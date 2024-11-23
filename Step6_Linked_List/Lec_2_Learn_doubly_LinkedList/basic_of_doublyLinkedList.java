@@ -30,9 +30,18 @@ public class basic_of_doublyLinkedList {
         }
         return head;
     }
+
+    private static void printLinkedList(Node head) {
+        Node temp = head;
+        while(temp != null){
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         int []arr = {10,20,30,40,50};
         Node head = convertArr2DLL(arr);
-
+        printLinkedList(head);
     }
 }
