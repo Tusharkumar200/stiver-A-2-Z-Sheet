@@ -86,6 +86,20 @@ public class basic_of_doublyLinkedList {
         return head;
     }
 
+    public static void deleteNode(Node temp){
+        Node prev = temp.prev;
+        Node front = temp.next;
+
+        if(front == null)
+        {
+            prev.next = null;
+            temp.prev = null;
+            return;
+        }
+        prev.next = front;
+        front.prev = prev;
+    }
+    
     private static void printLinkedList(Node head) {
         Node temp = head;
         while (temp != null) {
@@ -100,7 +114,8 @@ public class basic_of_doublyLinkedList {
         Node head = convertArr2DLL(arr);
         // head = DeleteHead(head);
         // head = deleteTail(head);
-        head = removeKthElement(head, 5); // Change to a valid k value for testing
+        // head = removeKthElement(head, 5);
+         deleteNode(head.next);
         printLinkedList(head);
     }
 }
