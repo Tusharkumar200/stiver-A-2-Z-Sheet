@@ -70,6 +70,7 @@ public class basic_of_doublyLinkedList {
         int []arr = {10,20,30,40,50};
         Node head = convertArr2DLL(arr);
         head = DeleteHead(head);
+        head = deleteTail(head);
         printLinkedList(head);
     }
 }
