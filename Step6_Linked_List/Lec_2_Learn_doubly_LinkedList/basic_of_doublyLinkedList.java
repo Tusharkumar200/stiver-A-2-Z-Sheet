@@ -31,6 +31,32 @@ public class basic_of_doublyLinkedList {
         return head;
     }
 
+    public static Node DeleteHead(Node head){
+        if(head == null || head.next == null){
+            return null;
+        }
+
+        Node temp = head;
+        head = head.next;
+        head.prev = null;
+        temp.next = null;
+        return head;
+    }
+    public static Node deleteTail(Node head){
+        if(head == null || head.next == null)return null;
+        Node tail = head;
+
+        while(tail.next != null){
+            tail = tail.next;
+
+        }
+        Node newTail= tail.prev;
+        newTail.next = null;
+        tail.prev = null;
+
+        return head;
+    }
+    
     private static void printLinkedList(Node head) {
         Node temp = head;
         while(temp != null){
@@ -39,9 +65,11 @@ public class basic_of_doublyLinkedList {
         }
         System.out.println();
     }
+    
     public static void main(String[] args) {
         int []arr = {10,20,30,40,50};
         Node head = convertArr2DLL(arr);
+        head = DeleteHead(head);
         printLinkedList(head);
     }
 }
