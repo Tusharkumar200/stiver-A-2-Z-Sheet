@@ -100,6 +100,12 @@ public class basic_of_doublyLinkedList {
         front.prev = prev;
     }
     
+   public static Node InsertBeforeHead(Node head, int val){
+        Node newNode = new Node(val, head, null);
+        head.prev = newNode;
+        return head;
+   }
+   
     private static void printLinkedList(Node head) {
         Node temp = head;
         while (temp != null) {
@@ -115,7 +121,9 @@ public class basic_of_doublyLinkedList {
         // head = DeleteHead(head);
         // head = deleteTail(head);
         // head = removeKthElement(head, 5);
-         deleteNode(head.next);
+        //  deleteNode(head.next);
+        head =InsertBeforeHead(head, 74);
+
         printLinkedList(head);
     }
 }
