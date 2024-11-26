@@ -100,11 +100,13 @@ public class basic_of_doublyLinkedList {
         front.prev = prev;
     }
     
-   public static Node InsertBeforeHead(Node head, int val){
+    public static Node InsertBeforeHead(Node head, int val) {
         Node newNode = new Node(val, head, null);
-        head.prev = newNode;
-        return head;
-   }
+        if (head != null) {
+            head.prev = newNode;
+        }
+        return newNode;
+    }
    
     private static void printLinkedList(Node head) {
         Node temp = head;
@@ -122,7 +124,7 @@ public class basic_of_doublyLinkedList {
         // head = deleteTail(head);
         // head = removeKthElement(head, 5);
         //  deleteNode(head.next);
-        head =InsertBeforeHead(head, 74);
+        head =InsertBeforeHead(head, 84);
 
         printLinkedList(head);
     }
