@@ -117,6 +117,28 @@ public class basic_of_doublyLinkedList {
         System.out.println();
     }
 //  Resume form the insert the node in the tail
+private static Node insertAtTail(Node head, int k) {
+        // Create a new node with data 'k'
+        Node newNode = new Node(k);
+    
+        // If the doubly linked list is empty, set 'head' to the new node
+        if (head == null) {
+            return newNode;
+        }
+    
+        // Traverse to the end of the doubly linked list
+        Node current = head;
+        while (current.next != null) {
+            current = current.next;
+        }
+    
+        // Connect the new node to the last node in the list
+        current.next = newNode;
+        newNode.prev = current;
+    
+        return head;
+        }
+
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40, 50};
         Node head = convertArr2DLL(arr);
