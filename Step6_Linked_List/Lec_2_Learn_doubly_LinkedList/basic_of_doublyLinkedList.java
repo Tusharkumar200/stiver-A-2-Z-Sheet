@@ -116,7 +116,7 @@ public class basic_of_doublyLinkedList {
         }
         System.out.println();
     }
-//  Resume form the insert the node in the tail
+//  Resume form the insert the node in the tail.
 private static Node insertAtTail(Node head, int k) {
         // Create a new node with data 'k'
         Node newNode = new Node(k);
@@ -147,6 +147,7 @@ private static Node insertAtTail(Node head, int k) {
         // head = removeKthElement(head, 5);
         //  deleteNode(head.next);
         head =InsertBeforeHead(head, 84);
+        head =insertAtTail(head, 100);
 
         printLinkedList(head);
     }
