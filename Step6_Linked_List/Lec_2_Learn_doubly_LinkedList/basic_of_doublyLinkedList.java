@@ -116,7 +116,7 @@ public class basic_of_doublyLinkedList {
         }
         System.out.println();
     }
-
+//  Resume form the insert the node in the tail
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40, 50};
         Node head = convertArr2DLL(arr);
