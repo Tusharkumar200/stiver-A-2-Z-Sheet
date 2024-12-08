@@ -116,7 +116,7 @@ public class basic_of_doublyLinkedList {
         }
         System.out.println();
     }
-//  Resume form the insert the node in the tail.
+// insert at Last
 private static Node insertAtTail(Node head, int k) {
         // Create a new node with data 'k'
         Node newNode = new Node(k);
