@@ -28,7 +28,7 @@ public class basic_of_linkedList {
         }
         return head;
     }
-// lksd
+// random insertion is left
     private static int lengthOfLL(Node head){
         int count =0;
         Node temp = head; // use to save the original head;
