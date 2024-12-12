@@ -139,8 +139,21 @@ public class basic_of_doublyLinkedList {
         return head;
     }
 
-    public static void ReverseDLL(Node head){
-        
+    public static Node ReverseDLL(Node head){
+
+        if(head == null || head.next == null) return head;
+
+        Node back = null;
+        Node current = head;
+
+        while (current != null) {
+            back = current.prev;
+            current.prev = current.next;
+            current.next = back;
+            current = current.prev;
+        }
+
+        return back.prev;
     }
 
     public static void main(String[] args) {
