@@ -117,7 +117,7 @@ public class basic_of_doublyLinkedList {
         System.out.println();
     }
 // insert at Last
-private static Node insertAtTail(Node head, int k) {
+    private static Node insertAtTail(Node head, int k) {
         // Create a new node with data 'k'
         Node newNode = new Node(k);
     
@@ -137,7 +137,11 @@ private static Node insertAtTail(Node head, int k) {
         newNode.prev = current;
     
         return head;
-        }
+    }
+
+    public static void ReverseDLL(Node head){
+        
+    }
 
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40, 50};
