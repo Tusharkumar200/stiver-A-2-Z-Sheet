@@ -39,6 +39,12 @@ public class Reverse_a_Linked_List {
 
         return head;
     }
+    
+
+    // optimal approched (iterative approched)
+    public static Node reverseLL(Node head){
+
+    }
     public static void printLinkedList(Node head) {
         Node temp = head;
         while (temp != null) {
