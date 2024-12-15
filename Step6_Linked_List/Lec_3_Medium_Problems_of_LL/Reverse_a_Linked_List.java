@@ -13,4 +13,29 @@ class Node{
 
 public class Reverse_a_Linked_List {
     
+
+    public static void printLinkedList(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        Node head = new Node(1);
+        head.next = new Node(3);
+        head.next.next = new Node(2);
+        head.next.next.next = new Node(4);
+
+        // Print the original linked list
+        System.out.print("Original Linked List: ");
+        printLinkedList(head);
+
+        // Reverse the linked list
+        head = reverseLinkedList(head);
+
+        System.out.print("Reversed Linked List: ");
+        printLinkedList(head);
+    }
 }
