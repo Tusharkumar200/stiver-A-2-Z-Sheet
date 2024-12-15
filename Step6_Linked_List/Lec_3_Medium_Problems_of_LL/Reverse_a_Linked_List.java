@@ -44,6 +44,20 @@ public class Reverse_a_Linked_List {
     // optimal approched (iterative approched)
     public static Node reverseLL(Node head){
 
+        if(head == null || head.next == null) return head;
+
+        Node temp = head;
+        Node prev = null;
+
+        while (temp != null) {
+            
+            Node front  = temp.next;
+            temp.next = prev;
+            prev = temp;
+            temp = front;
+        }
+
+        return prev;
     }
     public static void printLinkedList(Node head) {
         Node temp = head;
@@ -64,9 +78,10 @@ public class Reverse_a_Linked_List {
         printLinkedList(head);
 
         // Reverse the linked list
-        head = reverseLinkedList(head);
+        // head = reverseLinkedList(head);
+        head = reverseLL(head);
 
         System.out.print("Reversed Linked List: ");
         printLinkedList(head);
-    }`
+    }
 }
