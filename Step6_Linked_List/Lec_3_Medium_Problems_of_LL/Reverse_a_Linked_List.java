@@ -1,19 +1,43 @@
 package Step6_Linked_List.Lec_3_Medium_Problems_of_LL;
 
+import java.util.Stack;
 
 class Node{
     int data;
     Node next;
-
+    Node prev;
     Node(int data){
         this.data = data;
         this.next = null;
+        this.prev = null;
     }
 }
 
 public class Reverse_a_Linked_List {
     
+    public static Node reverseLinkedList(Node head){
 
+        Node temp = head;
+        Stack<Integer> stack = new Stack<>();  
+
+        while (temp != null) {
+            stack.push(temp.data);
+            temp  = temp.next;
+        }
+
+        //  take out from the stack
+
+        temp = head;
+
+        while (temp != null) {
+            
+            temp.data = stack.pop();
+            temp = temp.next;
+
+        }
+
+        return head;
+    }
     public static void printLinkedList(Node head) {
         Node temp = head;
         while (temp != null) {
