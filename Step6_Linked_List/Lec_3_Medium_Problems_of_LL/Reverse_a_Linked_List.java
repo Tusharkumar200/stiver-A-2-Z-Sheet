@@ -15,6 +15,7 @@ class Node{
 
 public class Reverse_a_Linked_List {
     
+    // BrutForce Approched
     public static Node reverseLinkedList(Node head){
 
         Node temp = head;
@@ -61,5 +62,5 @@ public class Reverse_a_Linked_List {
 
         System.out.print("Reversed Linked List: ");
         printLinkedList(head);
-    }
+    }`
 }
