@@ -13,6 +13,7 @@ class Node {
 
 public class Detect_a_Cycle_in_a_Linked_List {
     
+    // Optimal Solution
     public static boolean DetectCycle(Node head){
 
         Node slow = head;
