@@ -4,6 +4,28 @@ public class Starting_point_of_loop_in_a_LL {
     
     public static Node firstNode(Node head) {
 
+        
+        Node fast = head;
+        Node slow = head;
+
+        while (fast != null && fast.next != null) {
+            
+            slow = slow.next;
+            fast  = fast.next.next;
+
+            if(slow == fast){
+                slow = head;
+
+                while (slow != fast) {
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+                return slow;
+            }
+
+        }
+
+        return null;
     }
     public static void main(String[] args) {
         
