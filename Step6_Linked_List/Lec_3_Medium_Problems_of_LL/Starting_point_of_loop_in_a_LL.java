@@ -1,6 +1,19 @@
 package Step6_Linked_List.Lec_3_Medium_Problems_of_LL;
 
+
+class Node {
+    int data;
+    Node next;
+
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+
 public class Starting_point_of_loop_in_a_LL {
+
+    
     
     public static Node firstNode(Node head) {
 
