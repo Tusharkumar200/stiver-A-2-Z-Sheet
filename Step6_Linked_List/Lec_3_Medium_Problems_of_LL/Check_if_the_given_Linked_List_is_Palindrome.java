@@ -12,7 +12,7 @@ class Node{
 
 public class Check_if_the_given_Linked_List_is_Palindrome {
 
-    public Node reverseLinkedList(Node head) {
+    public static Node reverseLinkedList(Node head) {
 
         if(head == null || head.next == null) return head;
 
