@@ -11,6 +11,22 @@ class Node{
 }
 
 public class Check_if_the_given_Linked_List_is_Palindrome {
+
+    public Node reverseLinkedList(Node head) {
+
+        if(head == null || head.next == null) return head;
+
+        Node newHead = reverseLinkedList(head.next);
+        Node front = head.next;
+        front.next = head;
+        head.next = null;
+
+        return newHead;
+    }
+
+    public static boolean isPalindrome(Node head) {
+
+    }
     
     public static void printLinkedList(Node head) {
         Node temp = head;
