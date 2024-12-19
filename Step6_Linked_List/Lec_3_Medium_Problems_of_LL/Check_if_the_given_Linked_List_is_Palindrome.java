@@ -23,7 +23,7 @@ public class Check_if_the_given_Linked_List_is_Palindrome {
 
         return newHead;
     }
-
+    // optimal solution
     public static boolean isPalindrome(Node head) {
         if (head == null || head.next == null) return true;
 
