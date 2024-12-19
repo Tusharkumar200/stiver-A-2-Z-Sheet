@@ -1,8 +1,25 @@
 package Step6_Linked_List.Lec_3_Medium_Problems_of_LL;
 
+class Node{
+    int data;
+    Node next;
+
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+
 public class Check_if_the_given_Linked_List_is_Palindrome {
     
-
+    public static void printLinkedList(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         Node head = new Node(1);
         head.next = new Node(5);
