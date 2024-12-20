@@ -42,13 +42,14 @@ static ListNode SegregatetoOddEVen()
 
         if (temp.val%2!=0) // If odd Node,append to odd LinkedList
         {
-            oddTail.next = temp;
-            oddTail = temp;
+            evenTail.next = temp;
+            evenTail = temp;
         }
         else // If Even Node,append to even LinkedList
         {
-            evenTail.next = temp;
-            evenTail = temp;
+           
+            oddTail.next = temp;
+            oddTail = temp;
         }
     }
 
@@ -56,7 +57,28 @@ static ListNode SegregatetoOddEVen()
       return evenHead.next;
 }
 
-    static void PrintList(ListNode head) // Function to print the LinkedList
+ 
+// second method 
+public ListNode oddEvenList(ListNode head) {
+    if (head == null) return null;
+
+    // Initialize pointers for odd and even lists
+    ListNode odd = head, even = head.next, evenHead = even;
+
+    // Traverse the list
+    while (even != null && even.next != null) {
+        odd.next = even.next; // Link odd nodes
+        odd = odd.next;       // Move odd pointer
+        even.next = odd.next; // Link even nodes
+        even = even.next;     // Move even pointer
+    }
+
+    // Combine odd and even lists
+    odd.next = evenHead;
+
+    return head;
+}
+static void PrintList(ListNode head) // Function to print the LinkedList
 {
     ListNode curr = head;
     for (; curr != null; curr = curr.next)
