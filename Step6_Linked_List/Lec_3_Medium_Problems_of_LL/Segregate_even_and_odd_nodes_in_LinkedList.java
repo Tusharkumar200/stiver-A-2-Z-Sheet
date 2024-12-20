@@ -13,6 +13,48 @@ class ListNode
 
 public class Segregate_even_and_odd_nodes_in_LinkedList {
     
+  static ListNode head, tail;
+static void InsertatLast(int value) // Function for creating a LinkedList
+{
+    ListNode newnode = new ListNode(value);
+
+    if(head == null){
+        head = newnode;
+        tail = newnode;
+    }
+    else{
+
+        tail = tail.next = newnode;
+    }
+}
+
+static ListNode SegregatetoOddEVen()
+{
+    ListNode oddHead = new ListNode(-1), oddTail = oddHead;
+    ListNode evenHead = new ListNode(-1), evenTail = evenHead;
+    ListNode curr = head, temp;
+
+    while(curr != null){
+
+        temp = curr;
+        curr = curr.next;
+        temp.next = null;
+
+        if (temp.val%2!=0) // If odd Node,append to odd LinkedList
+        {
+            oddTail.next = temp;
+            oddTail = temp;
+        }
+        else // If Even Node,append to even LinkedList
+        {
+            evenTail.next = temp;
+            evenTail = temp;
+        }
+    }
+
+     evenTail.next = oddHead.next; 
+      return evenHead.next;
+}
 
     static void PrintList(ListNode head) // Function to print the LinkedList
 {
@@ -22,6 +64,14 @@ public class Segregate_even_and_odd_nodes_in_LinkedList {
     System.out.println("null");
 }
     public static void main(String[] args) {
-        
+    InsertatLast(1);
+    InsertatLast(2);
+    InsertatLast(3);
+    InsertatLast(4);
+    System.out.println("Intial LinkedList : ");
+    PrintList(head);
+    ListNode newHead = SegregatetoOddEVen();
+    System.out.println("LinkedList After Segregration ");
+    PrintList(newHead);
     }
 }
