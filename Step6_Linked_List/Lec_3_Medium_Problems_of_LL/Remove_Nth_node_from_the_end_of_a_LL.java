@@ -19,7 +19,39 @@ class Node {
 }
 public class Remove_Nth_node_from_the_end_of_a_LL {
     
+    public static Node DeleteNthNodefromEnd(Node head, int N) {
+       
+        Node fast = head;
+        Node slow = head;
 
+        for(int i =0; i< N ; i++){
+            fast = fast.next;
+        }
+
+        if(fast == null){
+            return head.next;
+        }
+
+        while (fast.next != null) {
+            fast = fast.next;
+            slow = slow.next;
+
+        }
+
+        Node delNode = slow.next;
+        slow.next = slow.next.next;
+        delNode = null;
+        return head;
+
+    }
+
+    static void printLL(Node head){
+
+        while (head != null) {
+            System.out.println(head.data + " ");
+            head = head.next;
+        }
+    }
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
         int N = 3;
