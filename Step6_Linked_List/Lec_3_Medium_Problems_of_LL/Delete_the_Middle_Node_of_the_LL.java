@@ -23,7 +23,7 @@ class Node {
 
 public class Delete_the_Middle_Node_of_the_LL {
     
-
+    // Brutforce Approched
     public Node deleteMiddle(Node head) {
 
         Node temp = head;
@@ -52,6 +52,29 @@ public class Delete_the_Middle_Node_of_the_LL {
         return head;
     }
     
+    // Optimal Approched
+    public static Node deleteMidd(Node head){
+        if (head == null || head.next == null) {
+            return null;
+        }
+
+       
+        Node slow = head;
+        Node fast = head;
+        fast = head.next.next;
+
+        
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        // Delete the middle node by skipping it
+        if (slow.next != null) {
+            slow.next = slow.next.next;
+        }
+        return head;
+    }
     static void printLL(Node head) {
         Node temp = head;
         while (temp != null) {
