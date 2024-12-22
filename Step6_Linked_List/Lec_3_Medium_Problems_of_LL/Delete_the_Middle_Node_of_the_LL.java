@@ -25,7 +25,31 @@ public class Delete_the_Middle_Node_of_the_LL {
     
 
     public Node deleteMiddle(Node head) {
-        
+
+        Node temp = head;
+        int n = 0;
+
+        while(temp != null){
+            n++;
+            temp = temp.next;
+        }
+
+        temp = head;
+        int res = n/2;
+
+        while(temp != null){
+            res--;
+
+            if(res == 0){
+                Node middle = temp.next;
+                temp.next = temp.next.next;
+                break;
+            }
+            temp = temp.next;
+        }
+
+
+        return head;
     }
     
     static void printLL(Node head) {
@@ -37,7 +61,7 @@ public class Delete_the_Middle_Node_of_the_LL {
         System.out.println();
     }
     public static void main(String[] args) {
-        Main main = new Main();
+        Delete_the_Middle_Node_of_the_LL main = new Delete_the_Middle_Node_of_the_LL();
         
         // Creating a sample linked list:
         Node head = new Node(1);
