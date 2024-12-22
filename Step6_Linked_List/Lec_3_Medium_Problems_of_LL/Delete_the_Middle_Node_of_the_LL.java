@@ -25,7 +25,7 @@ public class Delete_the_Middle_Node_of_the_LL {
     
 
     public Node deleteMiddle(Node head) {
-
+        
     }
     
     static void printLL(Node head) {
