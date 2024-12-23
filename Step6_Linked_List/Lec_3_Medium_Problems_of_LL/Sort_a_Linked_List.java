@@ -23,9 +23,36 @@ class Node {
 }
 
 public class Sort_a_Linked_List {
-    
+   static Node mergeTwoSortedLinkedLists(Node list1, Node list2) {
+
+   }
+
+   Node findMiddle(Node head){
+        if(head == null || head.next = null) return head;
+
+        Node slow = head;
+        Node fast = head.next;
+
+        while(fast !=null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+   }
+
     static Node sortLL(Node head){
 
+        if(head == null || head.next == null) return head;
+
+        Node middle = findMiddle(head);
+        Node right = middle.next;
+        middle.next = null;
+        Node left = head;
+
+        left = sortLL(left);
+        right = sortLL(right);
+        return mergeTwoSortedLinkedLists(left,right);
     }
 
     void printLinkedList(Node head) {
