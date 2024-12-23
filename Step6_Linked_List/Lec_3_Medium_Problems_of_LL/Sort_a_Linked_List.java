@@ -2,6 +2,16 @@ package Step6_Linked_List.Lec_3_Medium_Problems_of_LL;
 
 public class Sort_a_Linked_List {
     
+    void printLinkedList(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            // Print the data of the current node
+            System.out.print(temp.data + " "); 
+            // Move to the next node
+            temp = temp.next; 
+        }
+        System.out.println();
+    }
 
     public static void main(String[] args) {
         // Linked List: 3 2 5 4 1
