@@ -12,7 +12,20 @@ public class Find_intersection_of_Two_LL {
 
 
     static Node insertNode(Node head,int val) {
-    
+        
+        Node newNode = new Node(val);
+
+        if(head == null){
+            head = newNode;
+            return head;
+        }
+        Node temp = head;
+
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = newNode;
+        return head;
     }
     static Node intersectionPresent(Node head1,Node head2) {
 
