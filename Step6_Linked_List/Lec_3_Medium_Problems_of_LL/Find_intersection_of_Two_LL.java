@@ -1,25 +1,26 @@
+package Step6_Linked_List.Lec_3_Medium_Problems_of_LL;
 
-class Node {
-        int num;
-        Node next;
-        Node(int val) {
-            num = val;
-            next = null;
-        }
+class ListNode {
+    int num;
+    ListNode next;
+    ListNode(int val) {
+        num = val;
+        next = null;
+    }
 }
 
 public class Find_intersection_of_Two_LL {
 
 
-    static Node insertNode(Node head,int val) {
+    static ListNode insertNode(ListNode head, int val) {
         
-        Node newNode = new Node(val);
+        ListNode newNode = new ListNode(val);
 
         if(head == null){
             head = newNode;
             return head;
         }
-        Node temp = head;
+        ListNode temp = head;
 
         while(temp.next != null){
             temp = temp.next;
@@ -27,10 +28,10 @@ public class Find_intersection_of_Two_LL {
         temp.next = newNode;
         return head;
     }
-    static Node intersectionPresent(Node head1,Node head2) {
+    static ListNode intersectionPresent(ListNode head1, ListNode head2) {
 
-        Node d1 = head1;
-        Node d2 = head2;
+        ListNode d1 = head1;
+        ListNode d2 = head2;
 
         while(d1 != d2){
             d1 = d1==null ? head2: d1.next;
@@ -39,7 +40,7 @@ public class Find_intersection_of_Two_LL {
         return d1;
     }
 
-    static void printList(Node head) {
+    static void printList(ListNode head) {
         while(head.next != null) {
         System.out.print(head.num+"->");
             head = head.next;
@@ -48,23 +49,23 @@ public class Find_intersection_of_Two_LL {
     }
 
     public static void main(String[] args) {
-        Node head = null;
+    ListNode head = null;
     head=insertNode(head,1);
     head=insertNode(head,3);
     head=insertNode(head,1);
     head=insertNode(head,2);
     head=insertNode(head,4);
-    Node head1 = head;
+    ListNode head1 = head;
     head = head.next.next.next;
-    Node headSec = null;
+    ListNode headSec = null;
     headSec=insertNode(headSec,3);
-    Node head2 = headSec;
+    ListNode head2 = headSec;
     headSec.next = head;
     //printing of the lists
     System.out.print("List1: "); printList(head1);
     System.out.print("List2: "); printList(head2);
     //checking if intersection is present
-    Node answerNode = intersectionPresent(head1,head2);
+    ListNode answerNode = intersectionPresent(head1,head2);
     if(answerNode == null)  
     System.out.println("No intersection\n");
     else

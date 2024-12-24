@@ -2,11 +2,11 @@ package Step6_Linked_List.Lec_3_Medium_Problems_of_LL;
 
 import java.util.Stack;
 
-class Node{
+class ListNode {
     int data;
-    Node next;
-    Node prev;
-    Node(int data){
+    ListNode next;
+    ListNode prev;
+    ListNode(int data) {
         this.data = data;
         this.next = null;
         this.prev = null;
@@ -16,9 +16,9 @@ class Node{
 public class Reverse_a_Linked_List {
     
     // BrutForce Approched
-    public static Node reverseLinkedList(Node head){
+    public static ListNode reverseLinkedList(ListNode head){
 
-        Node temp = head;
+        ListNode temp = head;
         Stack<Integer> stack = new Stack<>();  
 
         while (temp != null) {
@@ -42,16 +42,16 @@ public class Reverse_a_Linked_List {
     
 
     // optimal approched (iterative approched)
-    public static Node reverseLL(Node head){
+    public static ListNode reverseLL(ListNode head){
 
         if(head == null || head.next == null) return head;
 
-        Node temp = head;
-        Node prev = null;
+        ListNode temp = head;
+        ListNode prev = null;
 
         while (temp != null) {
             
-            Node front  = temp.next;
+            ListNode front  = temp.next;
             temp.next = prev;
             prev = temp;
             temp = front;
@@ -59,8 +59,8 @@ public class Reverse_a_Linked_List {
 
         return prev;
     }
-    public static void printLinkedList(Node head) {
-        Node temp = head;
+    public static void printLinkedList(ListNode head) {
+        ListNode temp = head;
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
@@ -68,10 +68,10 @@ public class Reverse_a_Linked_List {
         System.out.println();
     }
     public static void main(String[] args) {
-        Node head = new Node(1);
-        head.next = new Node(3);
-        head.next.next = new Node(2);
-        head.next.next.next = new Node(4);
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(3);
+        head.next.next = new ListNode(2);
+        head.next.next.next = new ListNode(4);
 
         // Print the original linked list
         System.out.print("Original Linked List: ");
