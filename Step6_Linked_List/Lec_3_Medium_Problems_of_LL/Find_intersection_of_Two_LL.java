@@ -1,7 +1,21 @@
+import java.util.*;
+class Node {
+        int num;
+        Node next;
+        Node(int val) {
+            num = val;
+            next = null;
+        }
+}
+
 public class Find_intersection_of_Two_LL {
+
+
+    static Node insertNode(Node head,int val) {
     
+    }
     static Node intersectionPresent(Node head1,Node head2) {
-        
+
     }
 
     static void printList(Node head) {
