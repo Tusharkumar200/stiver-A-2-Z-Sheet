@@ -1,5 +1,16 @@
 public class Find_intersection_of_Two_LL {
     
+    static Node intersectionPresent(Node head1,Node head2) {
+        
+    }
+
+    static void printList(Node head) {
+        while(head.next != null) {
+        System.out.print(head.num+"->");
+            head = head.next;
+        }
+        System.out.println(head.num);
+    }
 
     public static void main(String[] args) {
         Node head = null;
