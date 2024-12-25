@@ -21,7 +21,15 @@ public class Add_1_to_a_number_represented_by_LL {
     }
 
     static Node addOne(Node head) {
-
+        int carry = addWithCarry(head);
+        
+        if(carry > 0)
+        {
+            Node newNode = new Node(carry);
+            newNode.next = head;
+            return newNode;
+        }
+        return head;
     }
 
     static void printList(Node head) {
