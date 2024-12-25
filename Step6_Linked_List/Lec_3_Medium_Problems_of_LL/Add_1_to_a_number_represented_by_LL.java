@@ -10,13 +10,20 @@ class Node {
 }
 public class Add_1_to_a_number_represented_by_LL {
     static int addWithCarry(Node head) {
-        
+        if (head == null) {
+            return 1;
+
+        }
+
+        int res =   head.data + addWithCarry(head.next);
+        head.data = res % 10;
+        return res / 10;
     }
 
     static Node addOne(Node head) {
 
     }
-    
+
     static void printList(Node head) {
         Node curr = head;
         while (curr != null) {
