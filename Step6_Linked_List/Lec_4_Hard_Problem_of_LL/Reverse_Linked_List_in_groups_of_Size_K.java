@@ -23,6 +23,15 @@ class Node {
 }
 public class Reverse_Linked_List_in_groups_of_Size_K {
     
+    public static void printLinkedList(Node head){
+        Node temp = head;
+
+        while(temp != null){
+            System.out.println(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
          Node head = new Node(5);
         head.next = new Node(4);
