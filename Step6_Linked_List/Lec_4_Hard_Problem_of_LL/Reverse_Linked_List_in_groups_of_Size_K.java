@@ -22,6 +22,17 @@ class Node {
     }
 }
 public class Reverse_Linked_List_in_groups_of_Size_K {
+    static Node reverseLinkedList(Node head) {
+
+    }
+
+    static Node getKthNode(Node temp, int k) {
+
+    }
+
+    static Node kReverse(Node head, int k){
+
+    }
     
     public static void printLinkedList(Node head){
         Node temp = head;
