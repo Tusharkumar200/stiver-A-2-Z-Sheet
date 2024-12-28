@@ -38,8 +38,7 @@ public class Reverse_Linked_List_in_groups_of_Size_K {
     }
 
     static Node getKthNode(Node temp, int k) {
-        k = 1;
-        while (temp != null && k > 0) {
+        while (temp != null && k > 1) {
             k--;
             temp = temp.next;
         }
@@ -84,7 +83,7 @@ public class Reverse_Linked_List_in_groups_of_Size_K {
         Node temp = head;
 
         while (temp != null) {
-            System.out.println(temp.data + " ");
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
         System.out.println();
