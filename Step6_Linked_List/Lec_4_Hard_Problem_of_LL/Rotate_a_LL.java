@@ -11,7 +11,18 @@ class Node {
 public class Rotate_a_LL {
 
     static Node insertNode(Node head,int val) {
+        Node newNode= new Node(val);
+        if(head ==null){
+            head = newNode;
+            return head;
+        }
+        Node temp = head;
+        while(temp.next != null){
 
+            temp = temp.next;
+        }
+        temp.next = newNode;
+        return head;
     }
 
     static Node rotateRight(Node head,int k) {
@@ -26,7 +37,7 @@ public class Rotate_a_LL {
         System.out.println(head.num);
         
     }
-    
+
     public static void main(String[] args) {
         Node head = null;
     //inserting Node
