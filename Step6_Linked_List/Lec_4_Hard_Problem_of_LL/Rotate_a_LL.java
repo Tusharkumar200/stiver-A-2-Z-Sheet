@@ -27,26 +27,23 @@ public class Rotate_a_LL {
 
     static Node rotateRight(Node head,int k) {
 
-        if(head == null || head.next == null || k == 0) return head;
+        if(head == null||head.next == null||k == 0) return head;
+        //calculating length
         Node temp = head;
-        int length =1;
-
-        while(temp.next !=null){
-            length++;
+        int length = 1;
+        while(temp.next != null) {
+            ++length;
             temp = temp.next;
         }
-
-        temp.next = head; // make the list circular
-        k = k % length;
-        int end = length - k;
-
-        temp = head;
-        for (int i = 0; i < end - 1; i++) {
-            temp = temp.next;
-        }
+        //link last node to first node
+        temp.next = head;
+        k = k%length; //when k is more than length of list
+        int end = length-k; //to get end of the list
+        while(end--!=0) temp = temp.next;
+        //breaking last node link and pointing to NULL
         head = temp.next;
         temp.next = null;
-
+            
         return head;
 
 
