@@ -11,12 +11,22 @@ class Node {
 public class Rotate_a_LL {
 
     static Node insertNode(Node head,int val) {
-        
+
     }
 
     static Node rotateRight(Node head,int k) {
 
     }    
+
+    static void printList(Node head) {
+        while(head.next != null) {
+            System.out.print(head.num+"->");
+            head = head.next;
+        } 
+        System.out.println(head.num);
+        
+    }
+    
     public static void main(String[] args) {
         Node head = null;
     //inserting Node
