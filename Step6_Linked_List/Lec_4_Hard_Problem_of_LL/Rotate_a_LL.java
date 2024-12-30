@@ -1,4 +1,4 @@
-
+package Step6_Linked_List.Lec_4_Hard_Problem_of_LL;
 class Node {
     int num;
     Node next;
@@ -31,16 +31,17 @@ public class Rotate_a_LL {
         Node temp = head;
         int length =1;
 
-        while(temp !=null){
+        while(temp.next !=null){
             length++;
             temp = temp.next;
         }
 
-        temp.next = head;
-        k = k%length;
-        int end = length -k;
+        temp.next = head; // make the list circular
+        k = k % length;
+        int end = length - k;
 
-        while (end-- != 0) {
+        temp = head;
+        for (int i = 0; i < end - 1; i++) {
             temp = temp.next;
         }
         head = temp.next;
@@ -52,12 +53,15 @@ public class Rotate_a_LL {
     }    
 
     static void printList(Node head) {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
         while(head.next != null) {
             System.out.print(head.num+"->");
             head = head.next;
         } 
         System.out.println(head.num);
-        
     }
 
     public static void main(String[] args) {
@@ -73,8 +77,7 @@ public class Rotate_a_LL {
     printList(head);
     
     int k = 2;
-    Node newHead = rotateRight(head,k);//calling function for rotating right 
-    of the nodes by k times
+    Node newHead = rotateRight(head,k);//calling function for rotating right of the nodes by k times
     
     System.out.println("After "+k+" iterations: ");
     printList(newHead);
