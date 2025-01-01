@@ -35,7 +35,37 @@ class Node {
 
 public class Clone_Linked_List_with_Random_and_Next_Pointer {
     
+    void insertCopyInBetween(Node head) {
 
+    }
+
+    void connectRandomPointers(Node head) {
+
+    }
+
+    Node getDeepCopyList(Node head) {
+
+        return head;
+    }
+
+    Node cloneLL(Node head) {
+
+        return head;
+    }
+
+    void printClonedLinkedList(Node head) {
+        while (head != null) {
+            System.out.print("Data: " + head.data);
+            if (head.random != null) {
+                System.out.print(", Random: " + head.random.data);
+            } else {
+                System.out.print(", Random: null");
+            }
+            System.out.println();
+            // Move to the next node
+            head = head.next;
+        }
+    }
 
     public static void main(String[] args) {
         // Example linked list: 7 -> 14 -> 21 -> 28
