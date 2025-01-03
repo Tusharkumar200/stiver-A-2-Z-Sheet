@@ -89,7 +89,7 @@ public class Clone_Linked_List_with_Random_and_Next_Pointer {
         return getDeepCopyList(head);
     }
 
-    void printClonedLinkedList(Node head) {
+     static void printClonedLinkedList(Node head) {
         while (head != null) {
             System.out.print("Data: " + head.data);
             if (head.random != null) {
