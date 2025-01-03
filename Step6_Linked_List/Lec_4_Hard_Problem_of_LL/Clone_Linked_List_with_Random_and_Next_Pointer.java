@@ -81,7 +81,12 @@ public class Clone_Linked_List_with_Random_and_Next_Pointer {
 
     Node cloneLL(Node head) {
 
-        return head;
+        if(head == null) return null;
+
+        insertCopyInBetween(head);
+        connectRandomPointers(head);
+
+        return getDeepCopyList(head);
     }
 
     void printClonedLinkedList(Node head) {
