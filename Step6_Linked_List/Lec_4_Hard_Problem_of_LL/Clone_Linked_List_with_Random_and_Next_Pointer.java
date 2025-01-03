@@ -47,7 +47,19 @@ public class Clone_Linked_List_with_Random_and_Next_Pointer {
     }
 
     void connectRandomPointers(Node head) {
+        Node temp = head;
 
+        while(temp != null){
+            Node copyNode = temp.next;
+
+            if(temp.random != null){
+                copyNode.random = temp.random.next;
+            }
+            else{
+                copyNode.random = null;
+            }
+            temp = temp.next.next;
+        }
     }
 
     Node getDeepCopyList(Node head) {
