@@ -63,8 +63,20 @@ public class Clone_Linked_List_with_Random_and_Next_Pointer {
     }
 
     Node getDeepCopyList(Node head) {
+        Node temp = head;
+        Node dummNode = new Node(-1);
+        Node res = dummNode;
 
-        return head;
+        while(temp != null){
+
+            res.next = temp.next;
+            res=res.next;
+
+            temp.next = temp.next.next;
+            temp = temp.next;
+        }
+
+        return dummNode.next;
     }
 
     Node cloneLL(Node head) {
