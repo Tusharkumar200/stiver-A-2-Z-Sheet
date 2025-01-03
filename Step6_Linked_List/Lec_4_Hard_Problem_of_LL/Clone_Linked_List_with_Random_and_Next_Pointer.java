@@ -35,7 +35,7 @@ class Node {
 
 public class Clone_Linked_List_with_Random_and_Next_Pointer {
     
-    void insertCopyInBetween(Node head) {
+   static void insertCopyInBetween(Node head) {
         Node temp = head;
         while(temp != null){
             Node nextElement = temp.next;
@@ -46,7 +46,7 @@ public class Clone_Linked_List_with_Random_and_Next_Pointer {
         }
     }
 
-    void connectRandomPointers(Node head) {
+   static void connectRandomPointers(Node head) {
         Node temp = head;
 
         while(temp != null){
@@ -62,7 +62,7 @@ public class Clone_Linked_List_with_Random_and_Next_Pointer {
         }
     }
 
-    Node getDeepCopyList(Node head) {
+    static Node getDeepCopyList(Node head) {
         Node temp = head;
         Node dummNode = new Node(-1);
         Node res = dummNode;
@@ -79,7 +79,7 @@ public class Clone_Linked_List_with_Random_and_Next_Pointer {
         return dummNode.next;
     }
 
-    Node cloneLL(Node head) {
+    static Node cloneLL(Node head) {
 
         if(head == null) return null;
 
