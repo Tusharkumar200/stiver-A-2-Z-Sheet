@@ -36,7 +36,14 @@ class Node {
 public class Clone_Linked_List_with_Random_and_Next_Pointer {
     
     void insertCopyInBetween(Node head) {
-
+        Node temp = head;
+        while(temp != null){
+            Node nextElement = temp.next;
+            Node copy = new Node(temp.data);
+            copy.next = nextElement;
+            temp.next = copy;
+            temp = nextElement;
+        }
     }
 
     void connectRandomPointers(Node head) {
