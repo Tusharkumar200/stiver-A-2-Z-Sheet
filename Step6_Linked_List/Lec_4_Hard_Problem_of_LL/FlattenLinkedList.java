@@ -32,6 +32,11 @@ public class FlattenLinkedList {
 
     public static Node flattenLinkedList(Node head) {
 
+        if(head == null || head.next == null) return head;
+
+        Node mergedHead = flattenLinkedList(head.next);
+        head = merge(head, mergedHead);
+        return head;
     }
 
     public static void printLinkedList(Node head) {
@@ -44,7 +49,7 @@ public class FlattenLinkedList {
     public static void printOriginalLinkedList(Node head, int depth) {
         while (head != null) {
             System.out.print(head.data);
-            
+
             
             if (head.child != null) {
                 System.out.print(" -> ");
