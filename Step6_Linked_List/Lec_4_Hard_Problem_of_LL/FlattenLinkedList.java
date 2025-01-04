@@ -25,9 +25,24 @@ class Node {
 
 
 public class FlattenLinkedList {
-    
 
+    public static Node merge(Node list1, Node list2) {
+
+    }
+
+    public static Node flattenLinkedList(Node head) {
+
+    }
+
+    public static void printLinkedList(Node head) {
+        while (head != null) {
+            System.out.print(head.data + " ");
+            head = head.child;
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
+
         Node head = new Node(5);
         head.child = new Node(14);
 
@@ -52,4 +67,6 @@ public class FlattenLinkedList {
         System.out.println("\nFlattened linked list: ");
         printLinkedList(flattened);
     }
+
+
 }
