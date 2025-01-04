@@ -1,3 +1,29 @@
+class Node {
+    int data;
+    Node next;
+    Node child;
+
+    
+    Node() {
+        this.data = 0;
+        this.next = null;
+        this.child = null;
+    }
+
+    Node(int x) {
+        this.data = x;
+        this.next = null;
+        this.child = null;
+    }
+
+    Node(int x, Node nextNode, Node childNode) {
+        this.data = x;
+        this.next = nextNode;
+        this.child = childNode;
+    }
+}
+
+
 public class FlattenLinkedList {
     
 
