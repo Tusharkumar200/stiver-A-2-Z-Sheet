@@ -41,6 +41,26 @@ public class FlattenLinkedList {
         }
         System.out.println();
     }
+    public static void printOriginalLinkedList(Node head, int depth) {
+        while (head != null) {
+            System.out.print(head.data);
+            
+            
+            if (head.child != null) {
+                System.out.print(" -> ");
+                printOriginalLinkedList(head.child, depth + 1);
+            }
+
+            
+            if (head.next != null) {
+                System.out.println();
+                for (int i = 0; i < depth; ++i) {
+                    System.out.print("| ");
+                }
+            }
+            head = head.next;
+        }
+    }
     public static void main(String[] args) {
 
         Node head = new Node(5);
