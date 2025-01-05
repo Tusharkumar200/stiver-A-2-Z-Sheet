@@ -25,10 +25,29 @@ public class Find_pairs_with_given_sum_in_doubly_linked_list {
         return tail;
     }
     
-    public static ArrayList<ArrayList<Integer>> findPairsWithGivenSum(int target, Node head) {
+    public static ArrayList<ArrayList<Integer>> findPairsWithGivenSum(int k, Node head) {
         ArrayList<ArrayList<Integer>> ans;
 
+        if(head == null) return ans;
 
+        Node left = head;
+        Node right = FindTail(head);
+
+        while (left.data < right.data) {
+            
+            if(left.data + right.data == k){
+
+                ans.add(left.data, right.data);
+                left = left.next;
+                right = right.next;
+            }
+            else if(left.data + right.data < k){
+                left = left.next;
+            }
+            else{
+                right = right.prev;
+            }
+        }
         return ans;
     }
 
