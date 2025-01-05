@@ -16,6 +16,15 @@ class Node
 
 public class Find_pairs_with_given_sum_in_doubly_linked_list {
     
+    public static Node FindTail(Node head){
+        Node tail = head;
+
+        while(tail.next != null){
+            tail = tail.next;
+        }
+        return tail;
+    }
+    
     public static ArrayList<ArrayList<Integer>> findPairsWithGivenSum(int target, Node head) {
         ArrayList<ArrayList<Integer>> ans;
 
