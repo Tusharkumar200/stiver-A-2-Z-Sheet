@@ -14,6 +14,14 @@ class Node
 }
 public class Delete_all_occurrences_of_a_key_in_DLL {
     
+    static Node deleteAllOccurOfX(Node head, int x) {
+
+        Node temp = head;
+        while (temp != null) {
+            
+        }
+        return head;
+    }
 
     public static void main(String[] args) {
         
