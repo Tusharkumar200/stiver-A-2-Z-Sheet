@@ -2,7 +2,7 @@ package Step7_Recursin_PatternWise;
 
 public class String_to_Integer {
 
-    public int myAtoi(String s) {
+    public static int myAtoi(String s) {
         String string = s.trim();
 
        // handle empty string
@@ -41,6 +41,9 @@ public class String_to_Integer {
    }
     
     public static void main(String[] args) {
+        String input = "-1234"; // Example input
+        int result = myAtoi(input);
         
+        System.out.println("Converted Integer: " + result);
     }
 }
