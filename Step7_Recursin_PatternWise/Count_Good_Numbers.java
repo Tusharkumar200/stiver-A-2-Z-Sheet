@@ -1,9 +1,9 @@
 
 public class Count_Good_Numbers{
     
-    private long MOD = 1_000_000_007;
+    private static long MOD = 1_000_000_007;
 
-    public int countGoodNumbers(long n) {
+    public static int countGoodNumbers(long n) {
         
         long even = (n + 1)/2;
         long odd = (n/2);
@@ -14,7 +14,7 @@ public class Count_Good_Numbers{
         return (int) ((first * second)%MOD);
     }
 
-    private long pow(long x, long n){
+    private static  long pow(long x, long n){
         if(n == 0)return 1;
 
         long temp = pow(x,n/2);
@@ -28,6 +28,6 @@ public class Count_Good_Numbers{
     }
     
     public static void main(String[] args) {
-        
+        System.out.println(countGoodNumbers(12345));
     }
 }
