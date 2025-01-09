@@ -14,7 +14,14 @@ public class Sort_A_Stack {
         stack.push(top);
      }
 
-    public Stack<Integer> sort(Stack<Integer> s) {
+    public  Stack<Integer> sort(Stack<Integer> s) {
+        if(s.empty()){
+            return s;
+        }
+        int top = s.pop();
+        sort(s);
+        sortedInsert(s, top);
+         return s;
         
     }
     public static void main(String[] args) {
