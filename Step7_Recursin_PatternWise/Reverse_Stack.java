@@ -8,7 +8,16 @@ public class Reverse_Stack {
         Reverse(s);
         insertAtLast(s,top);
     }
-    
+    public static void insertAtLast(Stack<Integer> stack , int elem){
+
+        if(stack.isEmpty()){
+            stack.push(elem);
+            return;
+        }
+        int topElem = stack.pop();
+        insertAtLast(stack, topElem);
+        stack.push(topElem);
+    }
     public static void main(String[] args) {
         
     }
