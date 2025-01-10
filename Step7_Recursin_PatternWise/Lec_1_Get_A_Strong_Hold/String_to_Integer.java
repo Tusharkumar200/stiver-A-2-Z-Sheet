@@ -1,4 +1,4 @@
-package Step7_Recursin_PatternWise;
+package Lec_1_Get_A_Strong_Hold;
 
 public class String_to_Integer {
 
