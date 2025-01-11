@@ -24,7 +24,15 @@ public class Generate_Parentheses {
                     validAnswers.add(new String(currentString));
                     return;
                 }
-                
+
+                if(forwardParensNeeded > 0){
+                    currentString[currentIndex] = '(';
+                    recurse(forwardParensNeeded-1, backwardsParensNeeded, currentIndex +1, currentString , validAnswers);
+                }
+                if(backwardsParensNeeded > 0 && forwardParensNeeded < backwardsParensNeeded){
+                    currentString[currentIndex] = ')';
+                    recurse(forwardParensNeeded, backwardsParensNeeded-1, currentIndex +1, currentString , validAnswers);
+                }
                                 
                     
     }
