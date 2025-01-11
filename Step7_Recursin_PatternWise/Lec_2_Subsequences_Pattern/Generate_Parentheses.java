@@ -1,3 +1,5 @@
+package Lec_2_Subsequences_Pattern;
+
 /*
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
@@ -37,6 +39,11 @@ public class Generate_Parentheses {
                     
     }
     public static void main(String[] args) {
-        
+        int n = 3; // Number of pairs of parentheses
+        List<String> result = generateParentheses(n);
+        System.out.println("All combinations of " + n + " pairs of parentheses:");
+        for (String s : result) {
+            System.out.println(s);
+        }
     }
 }
