@@ -6,8 +6,18 @@ Input: n = 3 Output: ["((()))","(()())","(())()","()(())","()()()"]
 Input: n = 2 Output: [“()()”, “(())”]
  */
 
-public class Generate_Parentheses {
+import java.util.List;
 
+public class Generate_Parentheses {
+    public static List<String> generateParentheses(int n) {
+            
+    }
+
+    private static void recurse(int forwardParensNeeded, int backwardsParensNeeded, int currentIndex, 
+                            char[] currentString, List<String> validAnswers) {
+                                
+                    
+    }
     public static void main(String[] args) {
         
     }
