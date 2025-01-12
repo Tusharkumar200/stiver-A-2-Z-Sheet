@@ -1,4 +1,4 @@
-
+package Lec_2_Subsequences_Pattern;
 public class Print_all_subsequences_Power_Set{
 
     
@@ -6,11 +6,13 @@ public class Print_all_subsequences_Power_Set{
 
         if( i == s.length()){
 
-            System.out.println(f + " ");
+            System.out.print(f + " ");
             return;
         }
 
-        
+        subsequences(i+1,s,f+s.charAt(i));
+
+        subsequences(i+1, s, f);
     }
     public static void main(String[] args) {
     String s = "abc";
