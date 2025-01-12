@@ -48,5 +48,11 @@ public class Print_all_subsequences_Power_Set {
         subsequences(0, s, f);
 
         int[] num = { 1, 2, 3 };
+        Print_all_subsequences_Power_Set obj = new Print_all_subsequences_Power_Set();
+        List<List<Integer>> subsets = obj.subsets(num);
+        System.out.print("\nAll possible subsets are: ");
+        for (List<Integer> subset : subsets) {
+            System.out.println(subset);
+        }
     }
 }
