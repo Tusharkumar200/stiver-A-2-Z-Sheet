@@ -7,6 +7,10 @@ public class PrintSum {
     }
     
     public static void main(String[] args) {
-        
+        int arr[] = {1,2,1};
+        int n = 3;
+        int sum =2;
+        List<List<Integer>> ds;
+        printS(0,ds ,0,sum, arr, n);
     }
 }
