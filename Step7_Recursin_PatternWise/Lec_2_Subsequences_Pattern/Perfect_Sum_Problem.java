@@ -1,3 +1,4 @@
+package Lec_2_Subsequences_Pattern;
 
 public class Perfect_Sum_Problem {
     
@@ -26,7 +27,7 @@ public class Perfect_Sum_Problem {
     public static void main(String[] args) {
         int[] arr={1,2,3,4,5};
         int sum = 5;
-
-        perfectSum(arr,sum);
+        System.out.println(perfectSum(arr,sum));
+        
     }
 }
