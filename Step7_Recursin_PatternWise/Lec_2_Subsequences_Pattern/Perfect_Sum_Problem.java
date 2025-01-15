@@ -1,6 +1,7 @@
+
 public class Perfect_Sum_Problem {
     
-    public int perfectSum(int[] arr, int sum) {
+    public static int perfectSum(int[] arr, int sum) {
         int n = arr.length;
         int[][] dp = new int[n + 1][sum + 1];
 
@@ -23,6 +24,9 @@ public class Perfect_Sum_Problem {
     }
 
     public static void main(String[] args) {
-        
+        int[] arr={1,2,3,4,5};
+        int sum = 5;
+
+        perfectSum(arr,sum);
     }
 }
