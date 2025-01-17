@@ -5,6 +5,14 @@ import java.util.Collections;
 
 public class Subset_Sum_1 {
     
+    static void subsetSumsHelper(int ind, int sum, ArrayList < Integer > arr, int N, ArrayList < Integer > sumSubset) {
+            
+    }
+
+    static ArrayList < Integer > subsetSums(ArrayList < Integer > arr, int N) {
+
+    }
+
     public static void main(String[] args) {
         
         ArrayList < Integer > arr = new ArrayList < > ();
