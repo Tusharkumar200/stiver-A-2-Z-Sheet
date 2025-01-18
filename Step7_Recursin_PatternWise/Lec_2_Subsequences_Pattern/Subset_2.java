@@ -1,5 +1,6 @@
 package Lec_2_Subsequences_Pattern;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -21,7 +22,15 @@ public class Subset_2 {
     }
 
     public static List < String > subsetsWithDup(int[] nums) {
-
+        List<String> ans = new ArrayList<>();
+        HashSet<String> res = new HashSet<>();
+        List<Integer>ds = new ArrayList<>();
+        fun(nums, 0, ds, res);
+        for(String i: res){
+            ans.add(i);
+            
+        }
+        return ans;
     }
 
     static void printAns(List < String > ans) {
