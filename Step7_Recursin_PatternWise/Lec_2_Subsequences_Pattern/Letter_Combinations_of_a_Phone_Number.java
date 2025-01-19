@@ -30,6 +30,9 @@ public class Letter_Combinations_of_a_Phone_Number {
         return result;
     }
     public static void main(String[] args) {
-        
+        Letter_Combinations_of_a_Phone_Number solution = new Letter_Combinations_of_a_Phone_Number();
+        String digits = "23";
+        List<String> combinations = solution.letterCombinations(digits);
+        System.out.println(combinations);
     }
 }
