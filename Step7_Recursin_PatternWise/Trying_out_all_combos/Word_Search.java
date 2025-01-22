@@ -1,7 +1,26 @@
 public class Word_Search {
 
     public boolean exist(char[][] board, String word) {
+        int m = board.length;
+        int n = board[0].length;
 
+        int index = 0;
+
+        for(int i=0; i<m;i++){
+
+            for(int j=0; j<n; j++){
+
+
+               if(board[i][j] == word.charAt(index)){
+
+                   if(searchNext(board, word, i, j, index, m, index)){
+                       return true;
+                   }
+               }     
+            }
+        }
+        
+        return false;
     }
 
     private boolean searchNext(char[][] board, String word, int row, int col, 
@@ -22,7 +41,8 @@ public class Word_Search {
         boolean left = searchNext(board, word, row , col-1, index +1, m, n);
         
         board[row][col] =c;
-        return top || right || bottom || left;
+            return top || right || bottom || left;
+        }
 
     public static void main(String[] args) {
         char[][] board = { { 'A', 'B', 'C', 'E' },
