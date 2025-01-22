@@ -13,7 +13,7 @@ public class Word_Search {
 
                if(board[i][j] == word.charAt(index)){
 
-                   if(searchNext(board, word, i, j, index, m, index)){
+                   if(searchNext(board, word, i, j, index, m, n)){
                        return true;
                    }
                }     
