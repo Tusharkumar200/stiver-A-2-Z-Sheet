@@ -1,13 +1,28 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 class N_Queen_Problem{
      public static List < List < String >> solveNQueens(int n) {
+            char[][] board = new char[n][n];
+            for(int i=0; i<n; i++){
+                for(int j= 0; j< n; j++){
+                    board[i][j] = ".";
+                }
+            }
+             List < List < String >> res = new ArrayList < List < String >> ();
+
+             int leftRow[] = new int[n];
+             int upperDiagonal[] = new int[2*n-1];
+             int lowerDiagonal[] = new int[2*n-1];
+             solve(0, board, res, leftRow, lowerDiagonal, upperDiagonal);
+             return res;
 
      }
 
      static void solve(int col, char[][] board, List < List < String >> res, int leftRow[], int lowerDiagonal[], int upperDiagonal[]) {
 
+        
      }
 
      static List < String > construct(char[][] board) {
