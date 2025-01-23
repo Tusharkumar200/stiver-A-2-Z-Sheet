@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.List;
 
 class N_Queen_Problem{
@@ -10,7 +11,15 @@ class N_Queen_Problem{
      }
 
      static List < String > construct(char[][] board) {
-        
+        List <String> res = new LinkedList<String>();
+
+        for(int i=0; i<board.length; i++){
+
+            String s = new String(board[i]);
+            res.add(s);
+
+        }
+        return res;
      }
     public static void main(String[] args) {
         int N = 4;
