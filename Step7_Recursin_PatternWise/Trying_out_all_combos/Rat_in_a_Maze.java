@@ -1,8 +1,22 @@
 import java.util.ArrayList;
 
+
+class Solution {
+    private static void solve(int i, int j, int a[][], int n, ArrayList < String > ans, String move,
+    int vis[][]) {
+
+
+    }
+
+    public static ArrayList < String > findPath(int[][] m, int n) {
+
+    }
+}
+
+
 public class Rat_in_a_Maze {
     
-    
+   
     public static void main(String[] args) {
          int n = 4;
     int[][] a = {{1,0,0,0},{1,1,0,1},{1,1,0,0},{0,1,1,1}};
