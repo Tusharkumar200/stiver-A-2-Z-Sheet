@@ -6,7 +6,7 @@ public class M_Coloring_Problem {
     public static boolean graphColoring(List < Integer > [] G, int[] color, int i, int C) {
 
         int n= G.length;
-        if(solve(i ,G, color ,n ,c) == true) return true;
+        if(solve(i ,G, color ,n ,C) == true) return true;
         return false;
     }
 
@@ -33,6 +33,7 @@ public class M_Coloring_Problem {
     }
     public static void main(String[] args) {
         int N = 4, M = 3;
+        @SuppressWarnings("unchecked")
         List < Integer > [] G = new ArrayList[N];
         for (int i = 0; i < N; i++) {
             G[i] = new ArrayList < > ();
