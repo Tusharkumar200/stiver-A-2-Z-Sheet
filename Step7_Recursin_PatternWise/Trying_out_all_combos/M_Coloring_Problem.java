@@ -5,6 +5,9 @@ public class M_Coloring_Problem {
     
     public static boolean graphColoring(List < Integer > [] G, int[] color, int i, int C) {
 
+        int n= G.length;
+        if(solve(i ,G, color ,n ,c) == true) return true;
+        return false;
     }
 
     private static boolean isSafe(int node, List < Integer > [] G, int[] color, int n, int col) {
