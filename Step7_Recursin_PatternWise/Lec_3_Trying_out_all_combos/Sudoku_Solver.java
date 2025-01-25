@@ -1,3 +1,5 @@
+package Lec_3_Trying_out_all_combos;
+
 public class Sudoku_Solver {
 
     public static boolean isValid(char[][] board, int row, int col, char c) {
@@ -9,9 +11,9 @@ public class Sudoku_Solver {
 
             if (board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3] == c)return false;
             
-            return false;
-        }   
-        return true;
+            }   
+            return true;
+        }
     }
 
     
