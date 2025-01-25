@@ -3,6 +3,17 @@ import java.util.List;
 
 public class M_Coloring_Problem {
     
+    public static boolean graphColoring(List < Integer > [] G, int[] color, int i, int C) {
+
+    }
+
+    private static boolean isSafe(int node, List < Integer > [] G, int[] color, int n, int col) {
+
+    }
+
+    private static boolean solve(int node, List < Integer > [] G, int[] color, int n, int m) {
+        
+    }
     public static void main(String[] args) {
         int N = 4, M = 3;
         List < Integer > [] G = new ArrayList[N];
