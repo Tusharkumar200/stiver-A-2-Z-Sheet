@@ -13,7 +13,7 @@ public class Palindrome_Partitioning {
     
     static void partitionHelper(int index, String s, List < String > path, List < List < String >> res) {
             if (index == s.length()) {
-            res.add(new ArrayList < > (path));
+            res.add(new ArrayList <> (path));
             return;
         }
         for (int i = index; i < s.length(); ++i) {
