@@ -17,3 +17,21 @@ class Implement_Queue_using_Arrays{
         System.out.println("The size of the queue after deleting an element " + q.size());
     }
 }
+
+class Queue{
+    private int arr[];
+    private int start, end, currSize, maxSize;
+    public Queue() {
+        arr = new int[16];
+        start = -1;
+        end = -1;
+        currSize = 0;
+    }
+    public Queue(int maxSize) {
+        this.maxSize = maxSize;
+        arr = new int[maxSize];
+        start = -1;
+        end = -1;
+        currSize = 0;
+    }
+}
