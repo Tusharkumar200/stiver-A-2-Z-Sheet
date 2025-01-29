@@ -34,4 +34,19 @@ class Queue{
         end = -1;
         currSize = 0;
     }
+
+    void push(int x){
+
+    }
+
+    int pop(){
+
+    }
+
+    int top(){
+
+    }
+    int size(){
+        
+    }
 }
