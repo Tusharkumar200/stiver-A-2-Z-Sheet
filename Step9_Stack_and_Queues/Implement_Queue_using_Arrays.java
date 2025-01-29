@@ -40,13 +40,16 @@ class Queue{
     }
 
     int pop(){
-
+        
     }
 
     int top(){
-
+        if(maxSize == 0){
+            return 0;
+        }
+        return q[start];
     }
     int size(){
-        
+        return currSize;
     }
 }
