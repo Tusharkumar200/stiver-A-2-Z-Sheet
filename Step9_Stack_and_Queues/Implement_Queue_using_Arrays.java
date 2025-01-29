@@ -53,7 +53,20 @@ class Queue{
     }
 
     int pop(){
-        
+        if(start == -1){
+            System.out.println("Queue Empty");
+            System.exit(1);
+        }
+        int popped = arr[start];
+        if(currSize == 1){
+            start = -1;
+            end = -1;
+        }
+        else{
+            start = (start +1) % maxSize;
+        }
+        currSize--;
+        return popped;
     }
 
     int top(){
