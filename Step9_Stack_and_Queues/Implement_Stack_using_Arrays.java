@@ -21,15 +21,23 @@ class stack{
 
     void push(int x){
 
+        if(top == size){
+            System.out.println("stack overFlow");
+        }
+        top = top+1;
+        arr[top] =x;
     }
     int pop(){
-
+        
+        int x = arr[top];
+        top = top-1;
+        return x;
     }
     int top(){
-
+        return arr[top];
     }
     int size(){
-        
+        return top+1;
     }
 
 }
