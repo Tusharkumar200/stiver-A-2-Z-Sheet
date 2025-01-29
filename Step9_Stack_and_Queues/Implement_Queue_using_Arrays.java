@@ -36,7 +36,20 @@ class Queue{
     }
 
     void push(int x){
-
+        if( currSize == maxSize){
+            System.out.println("Queue is full");
+            System.exit(1);
+        }
+        if(end == -1){
+            start =0;
+            end =0;
+        }
+        else{
+            end = (end +1) % maxSize;
+        }
+        arr[end] = x;
+        System.out.println("The element pushed is: "+x);
+        currSize++;
     }
 
     int pop(){
