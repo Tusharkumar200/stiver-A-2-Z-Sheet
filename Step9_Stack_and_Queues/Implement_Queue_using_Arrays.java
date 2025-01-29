@@ -1,4 +1,3 @@
-import java.util.Queue;
 
 class Implement_Queue_using_Arrays{
 
@@ -73,7 +72,7 @@ class Queue{
         if(maxSize == 0){
             return 0;
         }
-        return q[start];
+        return arr[start];
     }
     int size(){
         return currSize;
