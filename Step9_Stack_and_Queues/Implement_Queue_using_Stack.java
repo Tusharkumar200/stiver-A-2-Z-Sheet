@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class Implement_Queue_using_Stack {
     
     public static void main(String[] args) {
@@ -12,20 +14,43 @@ public class Implement_Queue_using_Stack {
 }
 
 class MyQueue {
-
+    Stack <Integer> input = new Stack < > ();
+    Stack <Integer> output = new Stack < > ();
+    
     public void push(int x) {
 
+        while(input.empty() == false){
+            output.push(input.peek());
+            input.pop();
+        }
+        System.out.println("The element pushed"+x);
+        input.push(x);
+
+        while (output.empty() == false) {
+            input.push(output.peek());
+            output.pop();
+        }
     }
 
     public int pop() {
+        if (input.empty()) {
+            System.out.println("Stack is empty");
 
+        }
+        int val = input.peek();
+        input.pop();
+        return val;
     }
 
     public int peek() {
+        if (input.empty()) {
+            System.out.println("Stack is empty");
 
+        }
+        return input.peek();
     }
 
     int size() {
-        
+        return input.size();
     }
 }
