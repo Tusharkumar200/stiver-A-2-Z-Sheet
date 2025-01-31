@@ -13,5 +13,19 @@ public class Implement_Queue_using_Stack {
 
 class MyQueue {
 
-    
+    public void push(int x) {
+
+    }
+
+    public int pop() {
+
+    }
+
+    public int peek() {
+
+    }
+
+    int size() {
+        
+    }
 }
