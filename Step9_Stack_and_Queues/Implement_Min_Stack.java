@@ -1,8 +1,6 @@
 public class Implement_Min_Stack {
     
-    public MinStack() {
-        
-    }
+    
     
     public void push(int val) {
         
@@ -19,7 +17,7 @@ public class Implement_Min_Stack {
     public int getMin() {
         
     }
-    
+
     public static void main(String[] args) {
         
     }
