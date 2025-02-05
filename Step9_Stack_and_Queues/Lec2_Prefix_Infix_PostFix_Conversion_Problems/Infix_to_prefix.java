@@ -19,9 +19,32 @@ class Infix_to_prefix {
         return (!isalpha(c) && !isdigit(c));
     }
 
-    static String infixToPrefix(String exp) {
+    static int getPriority(char C) {
+        if(C == '-' || C == '+') return 1;
+        else if(C == '*' || C == '/') return 2;
+        else if(C == '^') return 3;
+        return 0;
+    }
+    static String reverse(char str[], int start, int end) {
+        char temp;
+        while(start < end){
+            temp = str[start];
+            str[start] = str[end];
+            str[end] = temp;
+            start++;
+            end--;
+        }
+        return String.valueOf(str);
+    }
+    static String infixToPostfix(char[] infix1) {
 
     }
+
+    static String infixToPrefix(char[] infix) {
+
+    }
+
+
 
     public static void main(String[] args) {
         String s = ("(p+q)*(c-d)");
