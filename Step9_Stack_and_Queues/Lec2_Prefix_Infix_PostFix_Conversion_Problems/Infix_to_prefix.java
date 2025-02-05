@@ -1,25 +1,32 @@
 
-class Infix_to_prefix{
-    
-    static int Prec(char ch) {
-        switch (ch) {
-            case '+':
-            case '-':
-                return 1;
+class Infix_to_prefix {
 
-            case '*':
-            case '/':
-                return 2;
-
-            case '^':
-                return 3;
+    static boolean isalpha(char c) {
+        if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') {
+            return true;
         }
-        return -1;
+        return false;
     }
+
+    static boolean isdigit(char c) {
+        if (c >= '0' && c <= '9') {
+            return true;
+        }
+        return false;
+    }
+
+    static boolean isOperator(char c) {
+        return (!isalpha(c) && !isdigit(c));
+    }
+
     static String infixToPrefix(String exp) {
 
     }
-    public static void main(String[] args){
 
+    public static void main(String[] args) {
+        String s = ("(p+q)*(c-d)");
+        System.out.println("Infix expression: " + s);
+        System.out.print("Prefix expression: ");
+        System.out.print(infixToPrefix(s.toCharArray()));
     }
 }
