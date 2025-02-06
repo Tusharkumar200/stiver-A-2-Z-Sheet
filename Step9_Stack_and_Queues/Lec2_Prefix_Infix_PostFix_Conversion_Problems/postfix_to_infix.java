@@ -27,6 +27,7 @@ public class postfix_to_infix {
     }
 
     public static void main(String[] args) {
-
+        String exp = "ab*c+";
+        System.out.println(getInfix(exp));
     }
 }
