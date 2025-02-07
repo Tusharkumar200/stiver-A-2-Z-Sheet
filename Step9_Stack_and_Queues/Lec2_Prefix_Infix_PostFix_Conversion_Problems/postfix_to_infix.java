@@ -11,7 +11,7 @@ public class postfix_to_infix {
 
         Stack<String> s = new Stack<String>();
         for (int i = 0; i < exp.length(); i++) {
-            // Push operands
+           
             if (isOperand(exp.charAt(i))) {
                 s.push(exp.charAt(i) + "");
             } else {
