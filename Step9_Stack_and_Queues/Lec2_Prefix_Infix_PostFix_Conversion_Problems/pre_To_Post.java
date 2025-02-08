@@ -2,7 +2,10 @@ import java.util.Stack;
 
 public class pre_To_Post {
     
-    
+    static boolean isOperand(char x) {
+        return (x >= 'a' && x <= 'z') ||
+                (x >= 'A' && x <= 'Z');
+    }
     static String preToPost(String exp) {
         Stack<String> s = new Stack<String>();
         for (int i = exp.length() - 1; i >= 0; i--) {
@@ -14,7 +17,7 @@ public class pre_To_Post {
                 s.pop();
                 String op2 = s.peek();
                 s.pop();
-                s.push("(" + op1 + exp.charAt(i) + op2 + ")");
+                s.push( exp.charAt(i)  + op1 + op2 );
             }
         }
         return s.peek();
