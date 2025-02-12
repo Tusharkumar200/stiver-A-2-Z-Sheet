@@ -24,7 +24,7 @@ public class Next_Smaller_Element {
         return result;
     }
     public static void main(String[] args) {
-        NearestSmallerElement nse = new NearestSmallerElement();
+        Next_Smaller_Element nse = new Next_Smaller_Element();
         ArrayList<Integer> A = new ArrayList<>();
         A.add(4);
         A.add(5);
