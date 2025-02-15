@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 public class Sum_of_subarray_minimum {
-    
+
      public int sumSubarrayMins(int[] arr) {
          Stack<int[]> stack = new Stack<>();
         int[] res = new int[arr.length];
@@ -26,6 +26,9 @@ public class Sum_of_subarray_minimum {
         return (int) ans;     
     }
     public static void main(String[] args) {
-        
+        Sum_of_subarray_minimum solution = new Sum_of_subarray_minimum();
+        int[] arr = {3, 1, 2, 4};
+        int result = solution.sumSubarrayMins(arr);
+        System.out.println("Sum of subarray minimums: " + result);
     }
 }
