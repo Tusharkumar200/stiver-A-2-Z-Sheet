@@ -35,6 +35,10 @@ public class Remove_K_Digits {
         return sb.length() > 0 ? sb.toString() : "0";
     }
     public static void main(String[] args) {
-        
+        Remove_K_Digits remover = new Remove_K_Digits();
+        String num = "1432219";
+        int k = 3;
+        String result = remover.removeKdigits(num, k);
+        System.out.println("Result after removing " + k + " digits: " + result);
     }
 }
