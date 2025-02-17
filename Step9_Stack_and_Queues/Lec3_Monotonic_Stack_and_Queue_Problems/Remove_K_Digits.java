@@ -3,7 +3,7 @@ import java.util.Stack;
 public class Remove_K_Digits {
     
     public String removeKdigits(String num, int k) {
-        
+
         Stack<Character> stack = new Stack<>();
          for (char digit : num.toCharArray()) 
          {
@@ -14,19 +14,24 @@ public class Remove_K_Digits {
             stack.push(digit);
         }
 
+        // Remove remaining k digits from the end of the stack
          while (k > 0 && !stack.isEmpty()) {
             stack.pop();
             k--;
         }
+
+         // Construct the resulting string from the stack
         StringBuilder sb = new StringBuilder();
         while (!stack.isEmpty()) {
             sb.append(stack.pop());
         }
-        sb.reverse();
+        sb.reverse(); // Reverse to get the correct orde
 
+         // Remove leading zeros
         while (sb.length() > 0 && sb.charAt(0) == '0') {
             sb.deleteCharAt(0);
         }
+         // Handle edge case where result might be empty
         return sb.length() > 0 ? sb.toString() : "0";
     }
     public static void main(String[] args) {
