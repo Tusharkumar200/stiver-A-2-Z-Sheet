@@ -15,7 +15,7 @@ public class Area_of_largest_rectangle_in_Histogram {
         return maxArea;
     }
 
-    // optimal solution
+    
     static int optimalLargestArea(int arr[], int n) {
         return 0;
     }
