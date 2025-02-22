@@ -1,4 +1,17 @@
+import java.util.ArrayList;
+
 public class Sliding_Window_Maximum {
+    
+    //BruteForce Solution
+     static ArrayList < Integer > MaxSlidingWindow(int arr[], int k) {
+
+     }
+
+    // optimal solution
+    public static int[] maxSlidingWindow(int[] a, int k) {
+
+    }
+
     
     public static void main(String[] args) {
         int i, j, n, k = 3, x;
