@@ -18,6 +18,10 @@ public class Stock_span_problem {
         return span;
     }
     public static void main(String[] args) {
-        
+        Stock_span_problem stockSpanner = new Stock_span_problem();
+        int[] prices = {100, 80, 60, 70, 60, 75, 85};
+        for (int price : prices) {
+            System.out.println(stockSpanner.next(price));
+        }
     }
 }
