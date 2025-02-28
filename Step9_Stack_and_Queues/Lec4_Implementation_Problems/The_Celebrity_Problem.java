@@ -3,7 +3,7 @@
 public class The_Celebrity_Problem {
     
     private static int findCelebrity(int[][] matrix, int n) {
-
+        
         return 0;
     }
     public static void main(String[] args) {
