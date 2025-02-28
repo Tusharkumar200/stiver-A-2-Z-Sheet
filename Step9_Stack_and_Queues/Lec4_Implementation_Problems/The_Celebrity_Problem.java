@@ -40,7 +40,7 @@ public class The_Celebrity_Problem {
             {0, 1, 0}
         };
 
-        int n = matrix.length;
+        int n = matrix.length-1;
         int celebrity = findCelebrity(matrix, n);
         
                 if (celebrity == -1) {
