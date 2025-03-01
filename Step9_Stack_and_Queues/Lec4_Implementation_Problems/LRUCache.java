@@ -23,10 +23,19 @@ public class LRUCache{
 
     public int get(int key) {
 
-    }
+        if(map.containsKey(key)){
+            Node node = map.get(key);
+            remove(node);
+            insert(node);
+            return node.value;
+        }
+        else{
+             return -1;
+        }
+    }   
 
     public void put(int key, int value) {
-
+        
     }
 
     private void remove(Node node) {
@@ -34,6 +43,6 @@ public class LRUCache{
     }
 
     private void insert(Node node) {
-        
+
     }
 }
