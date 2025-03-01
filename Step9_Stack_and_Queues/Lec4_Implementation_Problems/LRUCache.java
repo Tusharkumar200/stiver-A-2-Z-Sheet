@@ -21,4 +21,19 @@ public class LRUCache{
         tail.prev = head;
     }
 
+    public int get(int key) {
+
+    }
+
+    public void put(int key, int value) {
+
+    }
+
+    private void remove(Node node) {
+
+    }
+
+    private void insert(Node node) {
+        
+    }
 }
