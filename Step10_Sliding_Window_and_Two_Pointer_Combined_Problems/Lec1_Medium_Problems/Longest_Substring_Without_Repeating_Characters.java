@@ -1,9 +1,20 @@
-
+import java.util.HashMap;
 
 class Longest_Substring_Without_Repeating_Characters{
 
+    static int solve(String s) {
+         HashMap < Character, Integer > mpp = new HashMap < Character, Integer > ();
 
+        int left = 0, right = 0;
+        int n = s.length();
+        int len = 0;
+
+        return len;
+    }
     public static void main(String[] args) {
-        
+        String str = "takeUforward";
+        System.out.println("The length of the longest substring without repeating 
+        characters is " + solve(str));
+
     }
 }
