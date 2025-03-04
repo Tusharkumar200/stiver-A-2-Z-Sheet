@@ -14,14 +14,14 @@ class Longest_Substring_Without_Repeating_Characters{
                 left = Math.max(mpp.get(s.charAt(right)) + 1, left);
             }
             mpp.put(s.charAt(right),right);
-            len = Math.max(left, right-left+1);
+            len = Math.max(len, right-left+1);
             right++;
 
         }
         return len;
     }
     public static void main(String[] args) {
-        String str = "takeUforward";
+        String str = "abcabcbb";
         System.out.println("The length of the longest substring without repeating characters is " + solve(str));
 
     }
