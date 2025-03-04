@@ -9,12 +9,20 @@ class Longest_Substring_Without_Repeating_Characters{
         int n = s.length();
         int len = 0;
 
+        while(right < n){
+            if (mpp.containsKey(s.charAt(right))){ 
+                left = Math.max(mpp.get(s.charAt(right)) + 1, left);
+            }
+            mpp.put(s.charAt(right),right);
+            len = Math.max(left, right-left+1);
+            right++;
+
+        }
         return len;
     }
     public static void main(String[] args) {
         String str = "takeUforward";
-        System.out.println("The length of the longest substring without repeating 
-        characters is " + solve(str));
+        System.out.println("The length of the longest substring without repeating characters is " + solve(str));
 
     }
 }
