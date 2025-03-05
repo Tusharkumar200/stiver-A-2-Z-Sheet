@@ -20,6 +20,10 @@ public class Max_Consecutive_OnesIII {
         return maxlen;
     }
     public static void main(String[] args) {
-        
+        Max_Consecutive_OnesIII solution = new Max_Consecutive_OnesIII();
+        int[] nums = {1,1,1,0,0,0,1,1,1,1,0};
+        int k = 2;
+        int result = solution.longestOnes(nums, k);
+        System.out.println("The maximum number of consecutive 1s is: " + result);
     }
 }
