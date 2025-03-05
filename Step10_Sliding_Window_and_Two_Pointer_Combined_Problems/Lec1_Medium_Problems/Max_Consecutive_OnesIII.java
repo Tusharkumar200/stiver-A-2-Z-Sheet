@@ -1,7 +1,7 @@
 
 
 public class Max_Consecutive_OnesIII {
-    
+    //  time_complexicity --> O(n) , s.c --> O(1)
     public int longestOnes(int[] nums, int k) {
         int n = nums.length;
         int l=0,zero=0,maxlen=0;
