@@ -23,6 +23,10 @@ public class longest_repeating_character_replacement {
         return res;
     }
     public static void main(String[] args) {
-        
+        longest_repeating_character_replacement solution = new longest_repeating_character_replacement();
+        String s = "AABABBA";
+        int k = 1;
+        int result = solution.characterReplacement(s, k);
+        System.out.println("The result is: " + result); // Expected output: 4
     }
 }
