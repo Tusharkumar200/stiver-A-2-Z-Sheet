@@ -21,6 +21,10 @@ public class Count_number_of_nice_subarrays {
         return ans;
     }
     public static void main(String[] args) {
-        
+        Count_number_of_nice_subarrays solution = new Count_number_of_nice_subarrays();
+        int[] nums = {1, 1, 2, 1, 1};
+        int k = 3;
+        int result = solution.numberOfSubarrays(nums, k);
+        System.out.println("Number of nice subarrays: " + result);
     }
 }
