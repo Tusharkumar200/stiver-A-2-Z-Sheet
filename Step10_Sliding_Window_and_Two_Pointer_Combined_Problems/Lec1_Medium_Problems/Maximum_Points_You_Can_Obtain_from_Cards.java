@@ -18,6 +18,10 @@ public class Maximum_Points_You_Can_Obtain_from_Cards {
         return maxSum;
     }
     public static void main(String[] args) {
-        
+        Maximum_Points_You_Can_Obtain_from_Cards solution = new Maximum_Points_You_Can_Obtain_from_Cards();
+        int[] nums = {1, 2, 3, 4, 5, 6, 1};
+        int k = 3;
+        int result = solution.maxScore(nums, k);
+        System.out.println("Maximum points you can obtain from cards: " + result);
     }
 }
