@@ -27,6 +27,9 @@ public class Longest_Substring_with_At_Most_K_Distinct_Characters {
          return maxlen;
     }
     public static void main(String[] args) {
-        
+        String s = "eceba";
+        int k = 2;
+        int result = longestSubstring(s, k);
+        System.out.println("The length of the longest substring with at most " + k + " distinct characters is: " + result);
     }
 }
