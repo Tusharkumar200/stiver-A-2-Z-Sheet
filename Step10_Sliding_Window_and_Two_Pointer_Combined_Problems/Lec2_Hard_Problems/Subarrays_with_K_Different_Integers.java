@@ -1,5 +1,5 @@
 import java.util.HashMap;
-import java.util.Map;
+
 
 public class Subarrays_with_K_Different_Integers {
     private int helper(int[] nums, int k) {
@@ -27,6 +27,6 @@ public class Subarrays_with_K_Different_Integers {
         int[] nums = {1, 2, 1, 2, 3};
         int k = 2;
         int result = solution.subarraysWithKDistinct(nums, k);
-        System.out.println("Number of subarrays with " + k + " different integers: " + result);
+        System.out.println("Number of subarrays with " + k + " distinct integers: " + result);
     }
 }
