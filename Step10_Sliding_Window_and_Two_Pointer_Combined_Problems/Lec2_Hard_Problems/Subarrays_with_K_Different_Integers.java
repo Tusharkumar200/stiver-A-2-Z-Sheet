@@ -2,27 +2,25 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Subarrays_with_K_Different_Integers {
-    
+    private int helper(int[] nums, int k) {
+        HashMap<Integer, Integer> mp = new HashMap<>();
+        int l = 0, res = 0;
+        for (int r = 0; r < nums.length; r++) {
+            if (mp.getOrDefault(nums[r], 0) == 0)
+                k--;
+            mp.put(nums[r], mp.getOrDefault(nums[r], 0) + 1);
+            while (k < 0) {
+                mp.put(nums[l], mp.get(nums[l]) - 1);
+                if (mp.get(nums[l++]) == 0)
+                    k++;
+            }
+            res += r - l + 1;
+        }
+        return res;
+    }
     public int subarraysWithKDistinct(int[] nums, int k) {
         
-         int l=0, r=0 ,count=0;
-         Map<Integer, Integer> map = new HashMap<>();
-        
-         while (r < nums.length) {
-            map.put(nums[r], map.getOrDefault(nums[r], 0) + 1);
-
-            while(map.size() <=k){
-                map.put(nums[l], map.get(nums[l]) - 1);
-
-                if(map.get(nums[l]) == 0){
-                    map.remove(nums[l]);
-                }
-                l = l-1;
-            }
-            count = count + (r-l+1);
-            r= r+1;
-         }
-         return count;
+        return helper(nums, k) - helper(nums, k - 1);
     }
     public static void main(String[] args) {
         Subarrays_with_K_Different_Integers solution = new Subarrays_with_K_Different_Integers();
