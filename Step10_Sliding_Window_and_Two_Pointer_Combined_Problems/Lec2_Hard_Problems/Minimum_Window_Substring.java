@@ -55,5 +55,9 @@ class Minimum_Window_Substring{
     
     public static void main(String[] args) {
         
+        Minimum_Window_Substring solution = new Minimum_Window_Substring();
+        String s = "ADOBECODEBANC";
+        String t = "ABC";
+        System.out.println(solution.minWindow(s, t)); // Expected output: "BANC"
     }
 }
