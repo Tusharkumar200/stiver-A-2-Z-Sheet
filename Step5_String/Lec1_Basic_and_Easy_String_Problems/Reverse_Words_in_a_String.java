@@ -11,6 +11,9 @@ public class Reverse_Words_in_a_String {
         return result.toString();
     }
     public static void main(String[] args) {
-        
+        Reverse_Words_in_a_String reverser = new Reverse_Words_in_a_String();
+        String input = "the sky is blue";
+        String output = reverser.reverseWords(input);
+        System.out.println(output);
     }
 }
