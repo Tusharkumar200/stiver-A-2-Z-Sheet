@@ -12,7 +12,7 @@ public class Isomorphic_String {
             return false;
         }
         
-     
+    
         for(int i = 0; i < len; i++) {
             
             if(indexS[s.charAt(i)] != indexT[t.charAt(i)]) {
@@ -29,6 +29,9 @@ public class Isomorphic_String {
     }
     
     public static void main(String[] args) {
-        
+        Isomorphic_String is = new Isomorphic_String();
+        System.out.println(is.isIsomorphic("egg", "add")); // true
+        System.out.println(is.isIsomorphic("foo", "bar")); // false
+        System.out.println(is.isIsomorphic("paper", "title")); // true
     }
 }
