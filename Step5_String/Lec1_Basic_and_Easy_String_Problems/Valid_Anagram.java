@@ -28,6 +28,12 @@ public class Valid_Anagram {
         }
 
     }
+
+    // second approched
+    public boolean isAnagramSecond(String s, String t) {
+        
+    }
+
     public static void main(String[] args) {
         Valid_Anagram validAnagram = new Valid_Anagram();
         String s = "anagram";
