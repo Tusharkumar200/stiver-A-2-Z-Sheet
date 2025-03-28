@@ -22,7 +22,6 @@ public class Valid_Anagram {
                 if(cnt[i] !=0){
                     return false;
                 }
-                return false; 
             }
             return true;
             
@@ -30,6 +29,14 @@ public class Valid_Anagram {
 
     }
     public static void main(String[] args) {
-        
+        Valid_Anagram validAnagram = new Valid_Anagram();
+        String s = "anagram";
+        String t = "nagaram";
+
+        if (validAnagram.isAnagram(s, t)) {
+            System.out.println("The strings are anagrams.");
+        } else {
+            System.out.println("The strings are not anagrams.");
+        }
     }
 }
