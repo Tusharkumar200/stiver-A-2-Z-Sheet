@@ -14,6 +14,6 @@ public class Rotate_String {
         Rotate_String rs = new Rotate_String();
         String s = "abcde";
         String goal = "cdeab";
-        System.out.println(rs.rotateString(s, goal)); // Expected output: true
+        System.out.println(rs.rotateString(s, goal));
     }
 }
