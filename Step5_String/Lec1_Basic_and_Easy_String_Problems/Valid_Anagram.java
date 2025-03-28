@@ -22,6 +22,7 @@ public class Valid_Anagram {
                 if(cnt[i] !=0){
                     return false;
                 }
+                return false; 
             }
             return true;
             
