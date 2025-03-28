@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Valid_Anagram {
     
     public boolean isAnagram(String s, String t) {
@@ -31,7 +33,14 @@ public class Valid_Anagram {
 
     // second approched
     public boolean isAnagramSecond(String s, String t) {
+        char[] sChars = s.toCharArray();
+        char[] tChars = t.toCharArray();
+
+         
+        Arrays.sort(sChars);
+        Arrays.sort(tChars);
         
+        return Arrays.equals(sChars, tChars);
     }
 
     public static void main(String[] args) {
