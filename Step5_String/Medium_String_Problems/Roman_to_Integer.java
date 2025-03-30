@@ -1,32 +1,35 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Roman_to_Integer{
+class Roman_to_Integer {
 
     public int romanToInt(String s) {
-        
-        Map<Character ,Integer> map = new HashMap<>();
-        map.put('I' ,1);
-        map.put('V' ,5);
-        map.put('X' ,10);
-        map.put('L' ,50);
-        map.put('C' ,100);
-        map.put('D' ,500);
-        map.put('M' ,1000);
 
-        int res = map.get(s.charAt(s.length()-1));
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
 
-        for(int i = s.length()-2 ; i>=0;i--){
-            if(map.get(s.charAt(i)) < map.get(s.charAt(i+1))){
-                res -=map.get(s.charAt(i));
-            }
-            else{
+        int res = map.get(s.charAt(s.length() - 1));
+
+        for (int i = s.length() - 2; i >= 0; i--) {
+            if (map.get(s.charAt(i)) < map.get(s.charAt(i + 1))) {
+                res -= map.get(s.charAt(i));
+            } else {
                 res += map.get(s.charAt(i));
             }
         }
         return res;
     }
+
     public static void main(String[] args) {
-        
+        Roman_to_Integer converter = new Roman_to_Integer();
+        String romanNumeral = "MCMXCIV";
+        int result = converter.romanToInt(romanNumeral);
+        System.out.println("The integer value of " + romanNumeral + " is: " + result);
     }
 }
