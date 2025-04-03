@@ -24,10 +24,15 @@ public class Count_Number_of_Substrings {
             }
             longestSubstringLength = Math.max(longestSubstringLength, right - left + 1);
          }
-     }
         return longestSubstringLength;
+     }
     }
+    
     public static void main(String[] args) {
-        
+        Count_Number_of_Substrings solution = new Count_Number_of_Substrings();
+        String s = "aabacbebebe";
+        int k = 3;
+        int result = solution.countSubstr(s, k);
+        System.out.println("The length of the longest substring with " + k + " unique characters is: " + result);
     }
 }
