@@ -1,38 +1,32 @@
 import java.util.HashMap;
-import java.util.Map;
+
 
 public class Count_Number_of_Substrings {
     
-     int countSubstr(String s, int k) {
-         Map<Character, Integer> charCountMap = new HashMap<>();
-        int n = s.length();
-        int longestSubstringLength = 0; 
-         int left = 0;
-
-         for(int right=0; right <n; right++)
-         {
-         char currentChar = s.charAt(right);
-         charCountMap.put(currentChar, charCountMap.getOrDefault(currentChar, 0) + 1);
-         
-         while(charCountMap.size() > k){
-            char leftChar = s.charAt(left);
-            charCountMap.put(leftChar, charCountMap.get(leftChar) - 1);
-             if (charCountMap.get(leftChar) == 0) {
-                    charCountMap.remove(leftChar);
-                }
-                left++;
+   int countSubstr(String s, int k) {
+        return countAtMost(s,k) - countAtMost(s,k-1);
+    }
+     int countAtMost(String s, int k){
+        int l=0,count=0;
+        HashMap<Character,Integer>map = new HashMap<>();
+        for(int r=0; r<s.length(); r++){
+            char ch = s.charAt(r);
+            map.put(ch,map.getOrDefault(ch,0)+1);
+            while(map.size() > k){
+                map.put(s.charAt(l),map.get(s.charAt(l))-1);
+                map.remove(s.charAt(l),0);
+                l++;
             }
-            longestSubstringLength = Math.max(longestSubstringLength, right - left + 1);
-         }
-        return longestSubstringLength;
-     }
+            count += (r-l+1);
+        }
+        return count;
     }
     
     public static void main(String[] args) {
-        Count_Number_of_Substrings solution = new Count_Number_of_Substrings();
-        String s = "aabacbebebe";
-        int k = 3;
-        int result = solution.countSubstr(s, k);
-        System.out.println("The length of the longest substring with " + k + " unique characters is: " + result);
+    Count_Number_of_Substrings obj = new Count_Number_of_Substrings();
+    String s = "abcba";
+    int k = 2;
+    int result = obj.countSubstr(s, k);
+    System.out.println("The number of substrings with exactly " + k + " distinct characters is: " + result);
     }
 }
