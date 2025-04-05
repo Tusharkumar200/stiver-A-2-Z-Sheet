@@ -35,6 +35,9 @@ public class Longest_Palindromic_Substring {
        return maxStr;
    }
     public static void main(String[] args) {
-        
+        Longest_Palindromic_Substring lps = new Longest_Palindromic_Substring();
+        String input = "babad";
+        String result = lps.longestPalindrome(input);
+        System.out.println("Longest Palindromic Substring of \"" + input + "\" is: \"" + result + "\"");
     }
 }
