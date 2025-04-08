@@ -23,14 +23,19 @@ public class Sum_of_Beauty_of_All_Substrings {
     }
 
      int getMinCount(int[] freq){
-        int min=0;
+        int min = Integer.MAX_VALUE;
         for(int i=0; i<26;i++){
-            min = Math.min(min,freq[i]);
+            if(freq[i] > 0) { 
+                min = Math.min(min, freq[i]);
+            }
         }
-        return min;
+        return min == Integer.MAX_VALUE ? 0 : min;
     }
 
     public static void main(String[] args) {
-        
+        Sum_of_Beauty_of_All_Substrings obj = new Sum_of_Beauty_of_All_Substrings();
+        String s = "aabcb";
+        int result = obj.beautySum(s);
+        System.out.println("The sum of beauty of all substrings is: " + result);
     }
 }
