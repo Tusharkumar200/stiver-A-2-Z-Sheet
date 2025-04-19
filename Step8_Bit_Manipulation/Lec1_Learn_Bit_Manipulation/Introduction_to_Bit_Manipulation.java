@@ -17,6 +17,7 @@ public class Introduction_to_Bit_Manipulation {
         System.out.println(a | b);
         System.out.println(a << b);
         System.out.println(a >> b);
+        System.out.println(~a);
     }
     public static void main(String[] args) {
         bitwiseOperator();
