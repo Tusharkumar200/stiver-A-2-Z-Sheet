@@ -1,7 +1,7 @@
 package Step8_Bit_Manipulation.Lec2_Interview_Problems;
 
 class XOR_Operation_in_an_Array{
-
+    
     public int xorOperation(int n, int start) {
         
         int ans=0;
