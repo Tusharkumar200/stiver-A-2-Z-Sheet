@@ -23,6 +23,6 @@ public class Print_Prime_Factors_of_a_Number {
     }
     public static void main(String[] args) {
          int n = 315;
-        printPrimeFactors(n)
+        printPrimeFactors(n);
     }
 }
