@@ -19,6 +19,10 @@ public class Power_n_x {
         return n < 0 ? 1 / ans : ans; // Handle negative powers
     }
     public static void main(String[] args) {
-        
+        Power_n_x powerCalculator = new Power_n_x();
+        double x = 2.0;
+        int n = -3;
+        double result = powerCalculator.myPow(x, n);
+        System.out.println("Result of " + x + "^" + n + " is: " + result);
     }
 }
