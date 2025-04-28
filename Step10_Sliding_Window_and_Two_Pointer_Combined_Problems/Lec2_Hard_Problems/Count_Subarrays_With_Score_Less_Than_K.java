@@ -13,6 +13,10 @@ public class Count_Subarrays_With_Score_Less_Than_K {
         return count;
     }
     public static void main(String[] args) {
-        
+        Count_Subarrays_With_Score_Less_Than_K solution = new Count_Subarrays_With_Score_Less_Than_K();
+        int[] nums = {1, 2, 3, 4};
+        long k = 10;
+        long result = solution.countSubarrays(nums, k);
+        System.out.println("The number of subarrays with score less than " + k + " is: " + result);
     }
 }
