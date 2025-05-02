@@ -29,7 +29,9 @@ class Connect_N_Ropes_With_Minimum_Cost{
         }
         return totalCost;
     }
-    public static void main(String args[]{
-
+    public static void main(String args[]){
+        int[] ropes = {1,2,3,4,5};
+        long result = connectRopes(ropes);
+        System.out.println("The minimum cost to connect all ropes is: " + result);
     }
 }
