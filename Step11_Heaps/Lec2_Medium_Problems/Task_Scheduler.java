@@ -13,7 +13,7 @@ public class Task_Scheduler {
         for(char t: tasks) {
             count.put(t, count.getOrDefault(t, 0) + 1);
         }
-        PriorityQueue<Integer> pq = new PriorityQueue(count.size(), Collections.reverseOrder());
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
         pq.addAll(count.values());
 
         int ans = 0;
