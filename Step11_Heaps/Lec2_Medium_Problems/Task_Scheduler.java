@@ -35,6 +35,10 @@ public class Task_Scheduler {
         return ans;
     }
     public static void main(String[] args) {
-        
+        Task_Scheduler scheduler = new Task_Scheduler();
+        char[] tasks = {'A', 'A', 'A', 'B', 'B', 'B'};
+        int n = 2;
+        int result = scheduler.leastInterval(tasks, n);
+        System.out.println("Minimum intervals needed: " + result);
     }
 }
