@@ -16,6 +16,10 @@ public class Hand_of_Straights {
         return true;
     }
     public static void main(String[] args) {
-        
+        Hand_of_Straights solution = new Hand_of_Straights();
+        int[] hand = {1, 2, 3, 6, 2, 3, 4, 7, 8};
+        int W = 3;
+        boolean result = solution.isNStraightHand(hand, W);
+        System.out.println("Can the hand be rearranged into groups of " + W + "? " + result);
     }
 }
