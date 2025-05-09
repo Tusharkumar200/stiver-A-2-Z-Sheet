@@ -15,6 +15,7 @@ public class Hand_of_Straights {
         }
         return true;
     }
+    // Main function
     public static void main(String[] args) {
         Hand_of_Straights solution = new Hand_of_Straights();
         int[] hand = {1, 2, 3, 6, 2, 3, 4, 7, 8};
