@@ -1,6 +1,6 @@
 public class Design_twitter {
     
-    public Twitter() {
+    public Design_twitter() {
         
     }
     
@@ -19,7 +19,7 @@ public class Design_twitter {
     public void unfollow(int followerId, int followeeId) {
         
     }
-    
+
     public static void main(String[] args) {
         
     }
