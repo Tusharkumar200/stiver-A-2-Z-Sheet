@@ -72,10 +72,16 @@ public class Design_twitter {
         if(!userMap.containsKey(followeeId)){
             userMap.put(followeeId,new User(followeeId));
         }
+
+        User user = userMap.get(followeeId);
+        user.addFollower(followeeId);
     }
     
     public void unfollow(int followerId, int followeeId) {
         
+        if(!userMap.containsKey(followeeId) || !userMap.containsKey(followeeId)) return;
+        User user = userMap.get(followeeId);
+        user.removeFollower(followeeId);
     }
 
     public static void main(String[] args) {
