@@ -33,6 +33,12 @@ public class User{
     public void addTweet(Tweet t){
         tweets.add(0,t);
     }
+    public void addFollower(int followeeId){
+        followers.add(followeeId);
+    }
+    public void removeFollower(int followeeId){
+        followers.remove(followeeId);
+    }
 }
 
 public class Design_twitter {
@@ -59,7 +65,13 @@ public class Design_twitter {
     }
     
     public void follow(int followerId, int followeeId) {
-        
+        if(!userMap.containsKey(followeeId)){
+            userMap.put(followeeId, new User(followeeId));
+        }
+
+        if(!userMap.containsKey(followeeId)){
+            userMap.put(followeeId,new User(followeeId));
+        }
     }
     
     public void unfollow(int followerId, int followeeId) {
