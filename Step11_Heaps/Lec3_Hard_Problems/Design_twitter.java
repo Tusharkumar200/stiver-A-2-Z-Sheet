@@ -21,25 +21,27 @@ class Tweet implements Comparable<Tweet>{
 }
 //User
 
- class User{
+class User{
     int userId;
-    HashSet<Integer> followers;
+    HashSet<Integer> followees; // changed from followers to followees
     List<Tweet> tweets;
 
     User(int userId){
         this.userId = userId;
-        followers = new HashSet<>();
+        followees = new HashSet<>();
         tweets = new LinkedList<>();
+        followees.add(userId); // user follows themselves by default
     }
 
     public void addTweet(Tweet t){
         tweets.add(0,t);
     }
-    public void addFollower(int followeeId){
-        followers.add(followeeId);
+    public void follow(int followeeId){
+        followees.add(followeeId);
     }
-    public void removeFollower(int followeeId){
-        followers.remove(followeeId);
+    public void unfollow(int followeeId){
+        if(followeeId != this.userId) // cannot unfollow self
+            followees.remove(followeeId);
     }
 }
 
@@ -66,30 +68,21 @@ public class Design_twitter {
         if(!userMap.containsKey(userId)){
             return new ArrayList<>();
         }  
-            
 
         PriorityQueue<Tweet> pq = new PriorityQueue<>();
         User user = userMap.get(userId);
-        for(int followeeId: user.followers){
-            int count=0;
 
+        for(int followeeId: user.followees){
+            if(!userMap.containsKey(followeeId)) continue;
+            int count=0;
             for(Tweet tweet: userMap.get(followeeId).tweets){
                 pq.offer(tweet);
                 count++;
-                if(count>10){
+                if(count>=10){
                     break;
                 }
             }
         }
-
-        int count = 0;
-        for(Tweet tweet: user.tweets){
-                pq.offer(tweet);
-                count++;
-                if(count>10){
-                    break;
-                }
-            }
 
         List<Integer> res = new ArrayList<>();
         int index=0;
@@ -102,23 +95,18 @@ public class Design_twitter {
     }
     
     public void follow(int followerId, int followeeId) {
+        if(!userMap.containsKey(followerId)){
+            userMap.put(followerId, new User(followerId));
+        }
         if(!userMap.containsKey(followeeId)){
             userMap.put(followeeId, new User(followeeId));
         }
-
-        if(!userMap.containsKey(followeeId)){
-            userMap.put(followeeId,new User(followeeId));
-        }
-
-        User user = userMap.get(followeeId);
-        user.addFollower(followeeId);
+        userMap.get(followerId).follow(followeeId);
     }
     
     public void unfollow(int followerId, int followeeId) {
-        
-        if(!userMap.containsKey(followeeId) || !userMap.containsKey(followeeId)) return;
-        User user = userMap.get(followeeId);
-        user.removeFollower(followeeId);
+        if(!userMap.containsKey(followerId) || !userMap.containsKey(followeeId)) return;
+        userMap.get(followerId).unfollow(followeeId);
     }
 
     public static void main(String[] args) {
