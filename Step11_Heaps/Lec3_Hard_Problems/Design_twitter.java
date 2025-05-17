@@ -1,5 +1,18 @@
+// tweet 
+class Tweet implements Comparable<Tweet>{
+    int time;
+    int tweetId;
+    Tweet(int t,int id){
+        time = t;
+        tweetId = id;
+
+    }
+    public int CompareTo(Tweet that){
+        return that.time - this.time;
+    }
+}
+
 public class Design_twitter {
-    // twitter
     public Design_twitter() {
         
     }
