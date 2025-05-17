@@ -1,9 +1,11 @@
 // tweet 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 class Tweet implements Comparable<Tweet>{
     int time;
@@ -19,7 +21,7 @@ class Tweet implements Comparable<Tweet>{
 }
 //User
 
-public class User{
+ class User{
     int userId;
     HashSet<Integer> followers;
     List<Tweet> tweets;
@@ -61,7 +63,42 @@ public class Design_twitter {
     }
     
     public List<Integer> getNewsFeed(int userId) {
-        
+        if(!userMap.containsKey(userId)){
+            return new ArrayList<>();
+        }  
+            
+
+        PriorityQueue<Tweet> pq = new PriorityQueue<>();
+        User user = userMap.get(userId);
+        for(int followeeId: user.followers){
+            int count=0;
+
+            for(Tweet tweet: userMap.get(followeeId).tweets){
+                pq.offer(tweet);
+                count++;
+                if(count>10){
+                    break;
+                }
+            }
+        }
+
+        int count = 0;
+        for(Tweet tweet: user.tweets){
+                pq.offer(tweet);
+                count++;
+                if(count>10){
+                    break;
+                }
+            }
+
+        List<Integer> res = new ArrayList<>();
+        int index=0;
+        while(!pq.isEmpty() && index<10){
+            Tweet tweet = pq.poll();
+            res.add(tweet.tweetId);
+            index++;
+        }
+        return res;
     }
     
     public void follow(int followerId, int followeeId) {
@@ -85,6 +122,27 @@ public class Design_twitter {
     }
 
     public static void main(String[] args) {
-        
+        Design_twitter twitter = new Design_twitter();
+
+        // User 1 posts a tweet (id = 5)
+        twitter.postTweet(1, 5);
+
+        // User 1's news feed should return a list with tweet id -> [5]
+        System.out.println(twitter.getNewsFeed(1));
+
+        // User 1 follows user 2
+        twitter.follow(1, 2);
+
+        // User 2 posts a tweet (id = 6)
+        twitter.postTweet(2, 6);
+
+        // User 1's news feed should return [6, 5]
+        System.out.println(twitter.getNewsFeed(1));
+
+        // User 1 unfollows user 2
+        twitter.unfollow(1, 2);
+
+        // User 1's news feed should return [5]
+        System.out.println(twitter.getNewsFeed(1));
     }
 }
