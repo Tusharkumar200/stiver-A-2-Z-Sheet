@@ -110,25 +110,25 @@ public class Design_twitter {
     public static void main(String[] args) {
         Design_twitter twitter = new Design_twitter();
 
-        // User 1 posts a tweet (id = 5)
+        
         twitter.postTweet(1, 5);
 
-        // User 1's news feed should return a list with tweet id -> [5]
+        
         System.out.println(twitter.getNewsFeed(1));
 
-        // User 1 follows user 2
+        
         twitter.follow(1, 2);
 
-        // User 2 posts a tweet (id = 6)
+        
         twitter.postTweet(2, 6);
 
-        // User 1's news feed should return [6, 5]
+        
         System.out.println(twitter.getNewsFeed(1));
 
-        // User 1 unfollows user 2
+        
         twitter.unfollow(1, 2);
 
-        // User 1's news feed should return [5]
+        
         System.out.println(twitter.getNewsFeed(1));
     }
 }
