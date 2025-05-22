@@ -39,6 +39,9 @@ public class inorder {
         return res;  
     }
     public static void main(String[] args) {
-
+        TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
+        inorder obj = new inorder();
+        List<Integer> result = obj.inorderTraversal(root);
+        System.out.println(result);
     }
 }

@@ -40,6 +40,9 @@ public class postorder {
         return res;  
     }
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
+        postorder po = new postorder();
+        List<Integer> result = po.postorderTraversal(root);
+        System.out.println(result);
     }
 }
