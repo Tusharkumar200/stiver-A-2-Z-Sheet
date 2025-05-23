@@ -49,6 +49,15 @@ public class Level_Order_Traversal_of_Binary_Tree {
         return wraplist;
     }
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+
+        Level_Order_Traversal_of_Binary_Tree lot = new Level_Order_Traversal_of_Binary_Tree();
+        List<List<Integer>> result = lot.levelOrder(root);
+
+        System.out.println(result);
     }
 }
