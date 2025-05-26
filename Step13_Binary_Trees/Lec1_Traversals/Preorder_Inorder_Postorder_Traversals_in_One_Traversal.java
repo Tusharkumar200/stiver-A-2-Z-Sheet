@@ -2,6 +2,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+// Simple generic Pair class
+class Pair<K, V> {
+    private K key;
+    private V value;
+
+    public Pair(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public K getKey() { return key; }
+    public V getValue() { return value; }
+    public void setKey(K key) { this.key = key; }
+    public void setValue(V value) { this.value = value; }
+}
+
 class Node {
     int data;
     Node left;
@@ -73,7 +89,7 @@ public class Preorder_Inorder_Postorder_Traversals_in_One_Traversal {
         }
         System.out.println();
     }
-    
+
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);
