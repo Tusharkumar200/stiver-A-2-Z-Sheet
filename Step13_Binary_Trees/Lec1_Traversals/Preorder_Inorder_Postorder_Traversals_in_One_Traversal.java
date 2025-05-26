@@ -65,6 +65,15 @@ public class Preorder_Inorder_Postorder_Traversals_in_One_Traversal {
         return result;
     }
     
+     public static void printList(List<Integer> list) {
+        // Iterate through the list
+        // and print each element
+        for (int num : list) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+    
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);
