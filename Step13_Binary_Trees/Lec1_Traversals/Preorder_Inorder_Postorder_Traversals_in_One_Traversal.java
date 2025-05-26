@@ -66,6 +66,31 @@ public class Preorder_Inorder_Postorder_Traversals_in_One_Traversal {
     }
     
     public static void main(String[] args) {
-        
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+
+        // Getting the pre-order, in-order,
+        // and post-order traversals
+        List<Integer> pre, in, post;
+        List<List<Integer>> traversals = preInPostTraversal(root);
+
+        // Extracting the traversals
+        // from the result
+        pre = traversals.get(0);
+        in = traversals.get(1);
+        post = traversals.get(2);
+
+        // Printing the traversals
+        System.out.print("Preorder traversal: ");
+        printList(pre);
+
+        System.out.print("Inorder traversal: ");
+        printList(in);
+
+        System.out.print("Postorder traversal: ");
+        printList(post);
     }
 }
