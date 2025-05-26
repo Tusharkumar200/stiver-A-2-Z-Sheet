@@ -37,16 +37,21 @@ public class Preorder_Inorder_Postorder_Traversals_in_One_Traversal {
     
     public static List<List<Integer>> preInPostTraversal(Node root) {
 
-         Stack<Pair<Node, Integer>> st = new Stack<>();
-         st.push(new Pair<>(root, 1));
+               
 
          List<Integer> pre = new ArrayList<>();
          List<Integer> in = new ArrayList<>();
          List<Integer> post = new ArrayList<>();
 
          if (root == null) {
-            return new ArrayList<>();
+            List<List<Integer>> result = new ArrayList<>();
+            result.add(new ArrayList<>());
+            result.add(new ArrayList<>());
+            result.add(new ArrayList<>());
+            return result;
         }
+         Stack<Pair<Node, Integer>> st = new Stack<>();
+           st.push(new Pair<>(root, 1));
 
         while(!st.isEmpty()){
             Pair<Node, Integer> it = st.pop();
