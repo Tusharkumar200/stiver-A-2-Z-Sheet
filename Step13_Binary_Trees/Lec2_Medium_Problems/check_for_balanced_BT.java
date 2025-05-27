@@ -1,12 +1,14 @@
 
 package Step13_Binary_Trees.Lec2_Medium_Problems;
-class Node {
+
+
+class TreeNode {
     int data;
-    Node left;
-    Node right;
+    TreeNode left;
+    TreeNode right;
 
     
-    Node(int val) {
+    TreeNode(int val) {
         data = val;
         left = null;
         right = null;
@@ -14,6 +16,21 @@ class Node {
 }
 public class check_for_balanced_BT{
 
+    public boolean isBalanced(TreeNode root) {
+        return dfsHeight(root) != -1;
+    }
+
+    public int dfsHeight(TreeNode root){
+        if(root == null)return 0;
+
+        int lh = dfsHeight(root.left);
+        if(lh == -1) return -1;
+        int rh = dfsHeight(root.right);
+        if(rh == -1) return -1;
+
+        if(Math.abs(lh - rh) > 1)return -1;
+        return Math.max(lh,rh) +1;
+    }
     public static void main(String[] args) {
         
     }
