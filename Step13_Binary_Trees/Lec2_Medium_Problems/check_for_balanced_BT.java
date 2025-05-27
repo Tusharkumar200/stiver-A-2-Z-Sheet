@@ -32,6 +32,15 @@ public class check_for_balanced_BT{
         return Math.max(lh,rh) +1;
     }
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.left.left.left = new TreeNode(6);
+
+        check_for_balanced_BT checker = new check_for_balanced_BT();
+        boolean result = checker.isBalanced(root);
+        System.out.println("Is the tree balanced? " + result);
     }
 }
