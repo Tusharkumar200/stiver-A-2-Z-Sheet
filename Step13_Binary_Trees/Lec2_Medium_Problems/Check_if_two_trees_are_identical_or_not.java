@@ -27,7 +27,7 @@ public class Check_if_two_trees_are_identical_or_not {
 
         return (p.val == q.val) &&
         isSameTree(p.left, q.left)&&
-        isSameTree(p.right, q.right)
+        isSameTree(p.right, q.right);
     }
 
     public static void main(String[] args) {
