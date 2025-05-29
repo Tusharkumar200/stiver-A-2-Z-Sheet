@@ -56,10 +56,11 @@ public class Zig_Zag_Traversal_of_Binary_Tree {
                 TreeNode node = nodesQueue.poll();
 
                 
-                int index = leftToRight ? i : (size - 1 - i);
-
-               
-                row.add(index, node.val);
+            if (leftToRight) {
+                row.add(node.val);
+            } else {
+                row.add(0, node.val);
+            }
 
                 if (node.left != null) {
                     nodesQueue.add(node.left);
