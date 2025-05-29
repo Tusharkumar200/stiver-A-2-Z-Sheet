@@ -91,6 +91,9 @@ public class Zig_Zag_Traversal_of_Binary_Tree {
 
 
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, null, new TreeNode(6)));
+        Zig_Zag_Traversal_of_Binary_Tree obj = new Zig_Zag_Traversal_of_Binary_Tree();
+        List<List<Integer>> result = obj.zigzagLevelOrder(root);
+        printResult(result);
     }
 }
