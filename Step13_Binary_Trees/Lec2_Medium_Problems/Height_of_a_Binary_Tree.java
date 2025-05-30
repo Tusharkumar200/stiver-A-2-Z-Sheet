@@ -1,4 +1,4 @@
-package Step13_Binary_Trees.Lec2_Medium_Problems;
+
 class Node {
     int data;
     Node left;
