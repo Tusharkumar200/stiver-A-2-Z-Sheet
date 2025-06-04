@@ -50,9 +50,25 @@ public class Maximum_path_sum {
 
         // Return the final maximum path sum
         return maxi[0];
+    }
     
     
     public static void main(String[] args) {
-        
+        // Example tree:
+        //       1
+        //      / \
+        //     2   3
+        //    / \
+        //   4   5
+
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+
+        Maximum_path_sum solver = new Maximum_path_sum();
+        int result = solver.maxPathSum(root);
+        System.out.println("Maximum Path Sum: " + result);
     }
 }
