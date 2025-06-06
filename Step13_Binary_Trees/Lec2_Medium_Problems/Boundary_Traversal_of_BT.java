@@ -58,7 +58,67 @@ class Boundary_Traversal_of_BT {
         }
     }
 
-    public static void main(String[] args) {
+    void addLeaves(Node root, List<Integer> res) {
+        // If the current node is a
+        // leaf, add its value to the result
+        if (isLeaf(root)) {
+            res.add(root.data);
+            return;
+        }
+        // Recursively add leaves of
+        // the left and right subtrees
+        if (root.left != null) {
+            addLeaves(root.left, res);
+        }
+        if (root.right != null) {
+            addLeaves(root.right, res);
+        }
+    }
 
+     List<Integer> printBoundary(Node root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
+        // If the root is not a leaf,
+        // add its value to the result
+        if (!isLeaf(root)) {
+            res.add(root.data);
+        }
+
+        // Add the left boundary, leaves,
+        // and right boundary in order
+        addLeftBoundary(root, res);
+        addLeaves(root, res);
+        addRightBoundary(root, res);
+
+        return res;
+    }
+
+    // Helper function to
+    // print the result
+    void printResult(List<Integer> result) {
+        for (int val : result) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+          Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+        root.right.left = new Node(6);
+        root.right.right = new Node(7);
+
+        Boundary_Traversal_of_BT solution = new Boundary_Traversal_of_BT();
+
+        // Get the boundary traversal
+        List<Integer> result = solution.printBoundary(root);
+
+        // Print the result
+        System.out.print("Boundary Traversal: ");
+        solution.printResult(result);
     }
 }
