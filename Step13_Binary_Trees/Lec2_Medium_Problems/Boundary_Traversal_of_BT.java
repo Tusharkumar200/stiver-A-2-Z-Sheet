@@ -39,7 +39,7 @@ class Boundary_Traversal_of_BT {
         Node curr = root.right;
         List<Integer> temp = new ArrayList<>();
         while (curr != null) {
-           
+
             if (!isLeaf(curr)) {
                 temp.add(curr.data);
             }
@@ -51,8 +51,7 @@ class Boundary_Traversal_of_BT {
                 curr = curr.left;
             }
         }
-        // Reverse and add the values from
-        // the temporary list to the result
+
         for (int i = temp.size() - 1; i >= 0; --i) {
             res.add(temp.get(i));
         }
@@ -75,7 +74,7 @@ class Boundary_Traversal_of_BT {
         }
     }
 
-     List<Integer> printBoundary(Node root) {
+    List<Integer> printBoundary(Node root) {
         List<Integer> res = new ArrayList<>();
         if (root == null) {
             return res;
@@ -95,16 +94,15 @@ class Boundary_Traversal_of_BT {
         return res;
     }
 
-    // Helper function to
-    // print the result
     void printResult(List<Integer> result) {
         for (int val : result) {
             System.out.print(val + " ");
         }
         System.out.println();
     }
+
     public static void main(String[] args) {
-          Node root = new Node(1);
+        Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
         root.left.left = new Node(4);
