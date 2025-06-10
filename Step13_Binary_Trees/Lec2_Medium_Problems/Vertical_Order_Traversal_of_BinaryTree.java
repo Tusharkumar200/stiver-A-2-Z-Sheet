@@ -12,17 +12,21 @@ class Node {
     }
 }
 
-private static void printResult(List<List<Integer>> result) {
-    for (List<Integer> level : result) {
-        for (int node : level) {
-            System.out.print(node + " ");
+public class Vertical_Order_Traversal_of_BinaryTree {
+
+    public List<List<Integer>> findVertical(Node root) {
+
+    }
+
+    private static void printResult(List<List<Integer>> result) {
+        for (List<Integer> level : result) {
+            for (int node : level) {
+                System.out.print(node + " ");
+            }
+            System.out.println();
         }
         System.out.println();
     }
-    System.out.println();
-}
-
-public class Vertical_Order_Traversal_of_BinaryTree {
 
     public static void main(String[] args) {
         Node root = new Node(1);
