@@ -33,6 +33,20 @@ public class LCA_in_Binary_Tree {
 
     }
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(1);
+        root.left.left = new TreeNode(6);
+        root.left.right = new TreeNode(2);
+        root.right.left = new TreeNode(0);
+        root.right.right = new TreeNode(8);
+        root.left.right.left = new TreeNode(7);
+        root.left.right.right = new TreeNode(4);
+
+        LCA_in_Binary_Tree lcaFinder = new LCA_in_Binary_Tree();
+        TreeNode p = root.left;
+        TreeNode q = root.left.right.right;
+        TreeNode lca = lcaFinder.lowestCommonAncestor(root, p, q);
+        System.out.println(lca.val);
     }
 }
