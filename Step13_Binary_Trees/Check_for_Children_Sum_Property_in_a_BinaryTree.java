@@ -55,6 +55,34 @@ public class Check_for_Children_Sum_Property_in_a_BinaryTree {
         }
     }
     public static void main(String[] args) {
-        
+        // Example usage:
+        // Construct the following tree:
+        //        50
+        //       /  \
+        //     7     2
+        //    / \   /
+        //   3  5  1
+
+        TreeNode root = new TreeNode(50);
+        root.left = new TreeNode(7);
+        root.right = new TreeNode(2);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(1);
+
+        Check_for_Children_Sum_Property_in_a_BinaryTree obj = new Check_for_Children_Sum_Property_in_a_BinaryTree();
+        obj.changeTree(root);
+
+        // Print inorder traversal to verify the change
+        printInorder(root);
+        }
+
+        // Helper method to print inorder traversal
+        public static void printInorder(TreeNode node) {
+        if (node == null) return;
+        printInorder(node.left);
+        System.out.print(node.val + " ");
+        printInorder(node.right);
+        }
     }
 }
