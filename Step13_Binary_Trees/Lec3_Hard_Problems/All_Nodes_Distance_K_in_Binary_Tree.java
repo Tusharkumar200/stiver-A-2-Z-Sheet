@@ -6,6 +6,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int x) {
+        val = x;
+        left = null;
+        right = null;
+    }
+}
+
 public class All_Nodes_Distance_K_in_Binary_Tree {
     
      public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
