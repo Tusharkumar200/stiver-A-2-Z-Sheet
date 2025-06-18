@@ -46,7 +46,14 @@ public class All_Nodes_Distance_K_in_Binary_Tree {
         return result;
 
     }
-    
+
+     public void makeParent(Map<TreeNode, TreeNode> parent, TreeNode node, TreeNode child) {
+        if (node == null)
+            return;
+        parent.put(node, child);
+        makeParent(parent, node.left, node);
+        makeParent(parent, node.right, node);
+    }
     public static void main(String[] args) {
         
     }
