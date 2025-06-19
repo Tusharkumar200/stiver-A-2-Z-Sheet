@@ -1,3 +1,5 @@
+package Lec3_Hard_Problems;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -67,6 +69,21 @@ public class All_Nodes_Distance_K_in_Binary_Tree {
         makeParent(parent, node.right, node);
     }
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(1);
+        root.left.left = new TreeNode(6);
+        root.left.right = new TreeNode(2);
+        root.left.right.left = new TreeNode(7);
+        root.left.right.right = new TreeNode(4);
+        root.right.left = new TreeNode(0);
+        root.right.right = new TreeNode(8);
+
+        TreeNode target = root.left;
+        int k = 2;
+
+        All_Nodes_Distance_K_in_Binary_Tree solution = new All_Nodes_Distance_K_in_Binary_Tree();
+        List<Integer> result = solution.distanceK(root, target, k);
+        System.out.println(result);
     }
 }
