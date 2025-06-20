@@ -21,7 +21,7 @@ class TreeNode {
 }
 
 public class All_Nodes_Distance_K_in_Binary_Tree {
-    
+    // Distance k
      public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
         Map<TreeNode, TreeNode> parent = new HashMap<>();
         makeParent(parent, root, null);
@@ -77,7 +77,7 @@ public class All_Nodes_Distance_K_in_Binary_Tree {
         root.left.right.left = new TreeNode(7);
         root.left.right.right = new TreeNode(4);
         root.right.left = new TreeNode(0);
-        root.right.right = new TreeNode(8);
+        root.right.right = new TreeNode(9);
 
         TreeNode target = root.left;
         int k = 2;
