@@ -1,4 +1,4 @@
-package Step13_Binary_Trees;
+package Lec3_Hard_Problems;
 
 class TreeNode {
     int val;
@@ -85,4 +85,3 @@ public class Check_for_Children_Sum_Property_in_a_BinaryTree {
         printInorder(node.right);
         }
     }
-}
