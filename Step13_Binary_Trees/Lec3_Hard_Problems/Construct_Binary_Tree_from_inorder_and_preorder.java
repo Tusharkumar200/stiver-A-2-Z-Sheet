@@ -1,3 +1,4 @@
+import java.util.Vector;
 
 class TreeNode {
     int val;
@@ -13,6 +14,9 @@ class TreeNode {
 
 public class Construct_Binary_Tree_from_inorder_and_preorder {
     
+      public TreeNode buildTree(Vector<Integer> preorder, Vector<Integer> inorder) {
+        
+      }
     public static void main(String[] args) {
         
     }
