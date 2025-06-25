@@ -56,14 +56,23 @@ public class Construct_Binary_Tree_from_inorder_and_preorder {
         }
     }
 
-    private void printVector(Vector<Integer> vec) {
-        for (int i = 0; i < vec.size(); i++) {
-            System.out.print(vec.get(i) + " ");
-        }
-        System.out.println();
-    }
 
     public static void main(String[] args) {
+        Vector<Integer> preorder = new Vector<>();
+        Vector<Integer> inorder = new Vector<>();
+        preorder.add(3);
+        preorder.add(9);
+        preorder.add(20);
+        preorder.add(15);
+        preorder.add(7);
+        inorder.add(9);
+        inorder.add(3);
+        inorder.add(15);
+        inorder.add(20);
+        inorder.add(7);
 
+        Construct_Binary_Tree_from_inorder_and_preorder obj = new Construct_Binary_Tree_from_inorder_and_preorder();
+        TreeNode root = obj.buildTree(preorder, inorder);
+        obj.printInorder(root);
     }
 }
