@@ -55,7 +55,14 @@ public class Construct_Binary_Tree_from_inorder_and_preorder {
             printInorder(root.right);
         }
     }
-    
+
+    private void printVector(Vector<Integer> vec) {
+        for (int i = 0; i < vec.size(); i++) {
+            System.out.print(vec.get(i) + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
 
     }
