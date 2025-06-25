@@ -48,6 +48,14 @@ public class Construct_Binary_Tree_from_inorder_and_preorder {
                 return root;
     }
 
+    private void printInorder(TreeNode root) {
+        if (root != null) {
+            printInorder(root.left);
+            System.out.print(root.val + " ");
+            printInorder(root.right);
+        }
+    }
+    
     public static void main(String[] args) {
 
     }
