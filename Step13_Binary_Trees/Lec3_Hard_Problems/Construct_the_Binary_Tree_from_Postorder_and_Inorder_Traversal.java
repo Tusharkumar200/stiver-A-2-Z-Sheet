@@ -26,20 +26,20 @@ public class Construct_the_Binary_Tree_from_Postorder_and_Inorder_Traversal {
     }
 
     public static void main(String[] args) {
-        int[] inorder = {9, 3, 15, 20, 7};
-        int[] postorder = {9, 15, 7, 20, 3};
+        int[] inorder = { 9, 3, 15, 20, 7 };
+        int[] postorder = { 9, 15, 7, 20, 3 };
         Construct_the_Binary_Tree_from_Postorder_and_Inorder_Traversal builder = new Construct_the_Binary_Tree_from_Postorder_and_Inorder_Traversal();
         TreeNode root = builder.buildTree(inorder, postorder);
 
         // Simple inorder traversal to verify the tree
         printInorder(root);
-        }
+    }
 
-        static void printInorder(TreeNode node) {
-            if (node == null) return;
-            printInorder(node.left);
-            System.out.print(node.val + " ");
-            printInorder(node.right);
-        }
+    static void printInorder(TreeNode node) {
+        if (node == null)
+            return;
+        printInorder(node.left);
+        System.out.print(node.val + " ");
+        printInorder(node.right);
     }
 }
