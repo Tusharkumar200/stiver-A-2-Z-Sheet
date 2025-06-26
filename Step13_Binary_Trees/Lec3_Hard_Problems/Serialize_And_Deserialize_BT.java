@@ -1,3 +1,16 @@
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    public TreeNode(int x) {
+        val = x;
+        left = null;
+        right = null;
+    }
+}
+
 public class Serialize_And_Deserialize_BT {
     
     public String serialize(TreeNode root) {
