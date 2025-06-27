@@ -69,6 +69,25 @@ public class Serialize_And_Deserialize_BT {
         return root;
     }
     public static void main(String[] args) {
-        
+        Serialize_And_Deserialize_BT codec = new Serialize_And_Deserialize_BT();
+
+        // Create a sample tree: 
+        //      1
+        //     / \
+        //    2   3
+        //       / \
+        //      4   5
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.right.left = new TreeNode(4);
+        root.right.right = new TreeNode(5);
+
+        String serialized = codec.serialize(root);
+        System.out.println("Serialized: " + serialized);
+
+        TreeNode deserialized = codec.deserialize(serialized);
+        String reserialized = codec.serialize(deserialized);
+        System.out.println("Reserialized: " + reserialized);
     }
 }

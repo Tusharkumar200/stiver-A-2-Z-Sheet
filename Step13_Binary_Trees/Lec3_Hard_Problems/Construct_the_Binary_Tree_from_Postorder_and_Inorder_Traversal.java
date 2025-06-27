@@ -1,6 +1,20 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    public TreeNode(int x) {
+        val = x;
+        left = null;
+        right = null;
+    }
+}
+
+
 public class Construct_the_Binary_Tree_from_Postorder_and_Inorder_Traversal {
 
     Map<Integer, Integer> map = new HashMap<>();
