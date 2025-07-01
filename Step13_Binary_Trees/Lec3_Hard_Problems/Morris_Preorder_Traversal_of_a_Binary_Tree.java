@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 class TreeNode {
@@ -14,6 +15,33 @@ class TreeNode {
 
 public class Morris_Preorder_Traversal_of_a_Binary_Tree {
 
+     public List<Integer> getPreorder(TreeNode root) {
+        List <Integer> preorder = new ArrayList<>();
+        TreeNode cur = root;
+
+        while(cur != null){
+            if(cur.left == null){
+                preorder.add(cur.val);
+                cur = cur.right;
+            }
+            else{
+                TreeNode prev = cur.left;
+                while (prev.right != null && prev.right !=cur) {
+                    prev = prev.right;
+                }
+                if(prev.right == null){
+                    prev.right = cur;
+                    cur = cur.left;
+                }
+                else{
+                    prev.right = null;
+                    preorder.add(cur.val);
+                    cur = cur.right;
+                }
+            }
+        }
+        return preorder;
+     }
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
