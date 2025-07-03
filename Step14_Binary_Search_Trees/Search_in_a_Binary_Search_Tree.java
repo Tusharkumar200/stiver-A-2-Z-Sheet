@@ -22,6 +22,20 @@ public class Search_in_a_Binary_Search_Tree {
         return root;
     }
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(4);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(7);
+        root.left.left = new TreeNode(1);
+        root.left.right = new TreeNode(3);
+
+        Search_in_a_Binary_Search_Tree bst = new Search_in_a_Binary_Search_Tree();
+        int searchVal = 2;
+        TreeNode result = bst.searchBST(root, searchVal);
+
+        if (result != null) {
+            System.out.println("Found node with value: " + result.val);
+        } else {
+            System.out.println("Value not found in BST.");
+        }
     }
 }
