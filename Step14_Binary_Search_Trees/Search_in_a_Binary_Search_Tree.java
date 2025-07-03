@@ -29,7 +29,7 @@ public class Search_in_a_Binary_Search_Tree {
         root.left.right = new TreeNode(3);
 
         Search_in_a_Binary_Search_Tree bst = new Search_in_a_Binary_Search_Tree();
-        int searchVal = 2;
+        int searchVal = 1;
         TreeNode result = bst.searchBST(root, searchVal);
 
         if (result != null) {
