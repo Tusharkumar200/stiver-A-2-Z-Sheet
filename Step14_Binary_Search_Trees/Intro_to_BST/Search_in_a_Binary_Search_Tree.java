@@ -1,4 +1,4 @@
-package Step14_Binary_Search_Trees;
+package Step14_Binary_Search_Trees.Intro_to_BST;
 
 class TreeNode {
     int val;
