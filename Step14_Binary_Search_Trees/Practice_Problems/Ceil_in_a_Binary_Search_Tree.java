@@ -14,6 +14,27 @@ class TreeNode {
 
 public class Ceil_in_a_Binary_Search_Tree {
     
+     public int findCeil(TreeNode<Integer> root, int key){
+
+        int ceil = -1;
+
+        while(root != null){
+
+            if(root.val == key){
+                ceil = root.val;
+                return ceil;
+            }
+
+            if(key > root.val){
+                root = root.right;
+            }
+            else{
+                ceil = root.val;
+                root = root.left;
+            }
+        }
+        return ceil;
+     }
     public static void main(String[] args) {
         
     }
