@@ -14,7 +14,7 @@ class TreeNode {
 
 public class Ceil_in_a_Binary_Search_Tree {
     
-     public int findCeil(TreeNode<Integer> root, int key){
+     public static int findCeil(TreeNode root, int key){
 
         int ceil = -1;
 
@@ -36,6 +36,16 @@ public class Ceil_in_a_Binary_Search_Tree {
         return ceil;
      }
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(8);
+        root.left = new TreeNode(4);
+        root.right = new TreeNode(12);
+        root.left.left = new TreeNode(2);
+        root.left.right = new TreeNode(6);
+        root.right.left = new TreeNode(10);
+        root.right.right = new TreeNode(14);
+
+        int key = 5;
+        int ceil = Ceil_in_a_Binary_Search_Tree.findCeil(root, key);
+        System.out.println("Ceil of " + key + " is: " + ceil);
     }
 }
