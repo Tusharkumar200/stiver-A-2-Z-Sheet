@@ -15,6 +15,9 @@ class TreeNode {
 
 public class Insert_into_a_Binary_Search_Tree {
     
+     public TreeNode insertIntoBST(TreeNode root, int val) {
+        
+     }
     public static void main(String[] args) {
         
     }
