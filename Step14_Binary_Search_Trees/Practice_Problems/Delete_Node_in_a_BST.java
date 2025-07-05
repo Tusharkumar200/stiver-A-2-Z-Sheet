@@ -51,11 +51,25 @@ public class Delete_Node_in_a_BST {
     }
 
     TreeNode helper(TreeNode root){
-
+         if(root.left == null){
+            return root.right;
+        }
+        else if(root.right == null){
+            return root.left;
+        }
+        else{
+            TreeNode rightChild = root.right;
+            TreeNode lastRight = findLastRight(root.left);
+            lastRight.right = rightChild;
+            return root.left;
+        }
     }
 
     TreeNode findLastRight(TreeNode root){
-        
+         if(root.right == null){
+            return root;
+        }
+        return findLastRight(root.right);
     }
     public static void main(String[] args) {
         
