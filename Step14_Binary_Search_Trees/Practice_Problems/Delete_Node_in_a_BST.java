@@ -72,6 +72,26 @@ public class Delete_Node_in_a_BST {
         return findLastRight(root.right);
     }
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(6);
+        root.left.left = new TreeNode(2);
+        root.left.right = new TreeNode(4);
+        root.right.right = new TreeNode(7);
+
+        Delete_Node_in_a_BST bst = new Delete_Node_in_a_BST();
+        root = bst.deleteNode(root, 3);
+
+        // Inorder traversal to print the tree after deletion
+        printInorder(root);
+
+        }
+
+        static void printInorder(TreeNode root) {
+            if (root == null) return;
+            printInorder(root.left);
+            System.out.print(root.val + " ");
+            printInorder(root.right);
+        }
     }
 }
