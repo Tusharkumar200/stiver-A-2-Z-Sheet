@@ -45,5 +45,3 @@ public class Check_if_a_tree_is_a_BST_or_BT {
         System.out.println("Is BST: " + checker.isValidBST(root2)); // false
     
 }
-
-
