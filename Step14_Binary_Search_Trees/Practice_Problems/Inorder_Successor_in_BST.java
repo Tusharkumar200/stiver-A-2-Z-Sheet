@@ -29,6 +29,22 @@ class Inorder_Successor_in_BST{
         return successor;
     }
     public static void main(String[] args) {
-        
+        TreeNode root = new TreeNode(20);
+        root.left = new TreeNode(8);
+        root.right = new TreeNode(22);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(12);
+        root.left.right.left = new TreeNode(10);
+        root.left.right.right = new TreeNode(14);
+
+        Inorder_Successor_in_BST obj = new Inorder_Successor_in_BST();
+        TreeNode p = root.left.right; // Node with value 12
+        TreeNode successor = obj.inorderSuccessor(root, p);
+
+        if (successor != null) {
+            System.out.println("Inorder Successor of " + p.val + " is " + successor.val);
+        } else {
+            System.out.println("Inorder Successor does not exist");
+        }
     }
 }
