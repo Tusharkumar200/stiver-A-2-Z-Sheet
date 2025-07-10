@@ -38,7 +38,7 @@ class Inorder_Successor_in_BST{
         root.left.right.right = new TreeNode(14);
 
         Inorder_Successor_in_BST obj = new Inorder_Successor_in_BST();
-        TreeNode p = root.left.right; // Node with value 12
+        TreeNode p = root.left.right; 
         TreeNode successor = obj.inorderSuccessor(root, p);
 
         if (successor != null) {
