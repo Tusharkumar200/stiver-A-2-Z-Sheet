@@ -44,6 +44,30 @@ public class Recover_Binary_Search_Tree {
     }
 
     public static void main(String[] args) {
+        // Example usage: Construct a BST with two nodes swapped
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(4);
+        root.right.left = new TreeNode(2);
 
+        System.out.println("Before recovery (inorder):");
+        printInorder(root);
+        System.out.println();
+
+        Recover_Binary_Search_Tree solver = new Recover_Binary_Search_Tree();
+        solver.recoverTree(root);
+
+        System.out.println("After recovery (inorder):");
+        printInorder(root);
+        System.out.println();
+        }
+
+        // Helper method to print inorder traversal
+        static void printInorder(TreeNode root) {
+        if (root == null) return;
+        printInorder(root.left);
+        System.out.print(root.val + " ");
+        printInorder(root.right);
+        }
     }
 }
