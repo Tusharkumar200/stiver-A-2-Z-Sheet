@@ -1,68 +1,67 @@
 import java.util.Stack;
 
-class BSTIterator{
-    Stack <TreeNode> st = new Stack<>();
+class BSTIterator {
+    Stack<TreeNode> st = new Stack<>();
     boolean reverse = true;
-    BSTIterator(TreeNode root , boolean isReverse){
+
+    BSTIterator(TreeNode root, boolean isReverse) {
         reverse = isReverse;
         pushAll(root);
     }
 
-    
     public boolean hasNext() {
         return !st.isEmpty();
     }
 
     public int next() {
         TreeNode tn = st.pop();
-        if( reverse == false){
+        if (reverse == false) {
 
-            pushAll(tn.right);  
-        }
-        else{
+            pushAll(tn.right);
+        } else {
             pushAll(tn.left);
         }
         return tn.val;
     }
 
-    void pushAll(TreeNode node){
-        while(node !=null){
+    void pushAll(TreeNode node) {
+        while (node != null) {
             st.push(node);
-            if(reverse == true){
+            if (reverse == true) {
                 node = node.right;
-            }
-            else{
+            } else {
                 node = node.left;
             }
         }
     }
- }
+}
 
 public class Two_Sum_In_BST {
-    
-     public boolean findTarget(TreeNode root, int k) {
-        if(root == null){
+
+    public boolean findTarget(TreeNode root, int k) {
+        if (root == null) {
             return false;
         }
 
-        BSTIterator l = new BSTIterator(root , false);
-        BSTIterator r = new BSTIterator(root , true);
+        BSTIterator l = new BSTIterator(root, false);
+        BSTIterator r = new BSTIterator(root, true);
 
-        int i = l.next(); 
+        int i = l.next();
         int j = r.next();
 
-        while( i < j){
+        while (i < j) {
 
-            if( i + j == k)return true;
-            else if( i + j < k ){
+            if (i + j == k)
+                return true;
+            else if (i + j < k) {
                 i = l.next();
-            }
-            else{
+            } else {
                 j = r.next();
             }
         }
         return false;
     }
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(5);
         root.left = new TreeNode(3);
