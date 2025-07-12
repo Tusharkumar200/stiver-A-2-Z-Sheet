@@ -1,3 +1,16 @@
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    public TreeNode(int x) {
+        val = x;
+        left = null;
+        right = null;
+    }
+}
+
 public class Recover_Binary_Search_Tree {
     TreeNode first;
     TreeNode prev;

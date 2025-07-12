@@ -1,5 +1,18 @@
 import java.util.Stack;
 
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    public TreeNode(int x) {
+        val = x;
+        left = null;
+        right = null;
+    }
+}
+
 class BSTIterator {
     Stack<TreeNode> st = new Stack<>();
     boolean reverse = true;
