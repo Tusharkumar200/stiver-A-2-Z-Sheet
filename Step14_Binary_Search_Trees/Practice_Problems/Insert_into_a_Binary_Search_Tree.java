@@ -1,4 +1,3 @@
-package Step14_Binary_Search_Trees.Practice_Problems;
 
 class TreeNode {
     int val;
