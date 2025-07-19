@@ -12,7 +12,14 @@ public class DFS_Treversal {
      }
     public static void dfs(int node, boolean vis[], ArrayList<ArrayList<Integer>> adj,
             ArrayList<Integer> ls) {
-                
+                vis[node] = true;
+                ls.add(node);
+
+                for(Integer it : adj.get(node)){
+                    if(vis[it] == false){
+                        dfs(node, vis, adj, ls);
+                    }
+                }
     }
 
     public static void main(String[] args) {
