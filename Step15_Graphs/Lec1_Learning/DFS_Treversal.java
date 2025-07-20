@@ -23,6 +23,15 @@ public class DFS_Treversal {
     }
 
     public static void main(String[] args) {
+        int V = 5;
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        for (int i = 0; i < V; i++) adj.add(new ArrayList<>());
+        adj.get(0).add(1);
+        adj.get(0).add(2);
+        adj.get(1).add(3);
+        adj.get(1).add(4);
 
+        DFS_Treversal obj = new DFS_Treversal();
+        System.out.println(obj.dfsOfGraph(V, adj));
     }
 }
