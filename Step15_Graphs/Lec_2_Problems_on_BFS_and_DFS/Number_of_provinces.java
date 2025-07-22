@@ -10,7 +10,7 @@ public class Number_of_provinces {
 
         for(Integer it: adjLs.get(node)){
             if(vis[it] == 0){
-                dfs(node, adjLs, vis);
+                dfs(it, adjLs, vis);
             }
         }
     }
@@ -24,7 +24,7 @@ public class Number_of_provinces {
             for (int j = 0; j < n; j++)
             if (isConnected[i][j] == 1 && i != j)
                 adj.get(i).add(j);
-                
+
         int[] vis = new int[n];
         int count = 0;
         for (int i = 0; i < n; i++) {
@@ -36,6 +36,12 @@ public class Number_of_provinces {
         return count;
     }
     public static void main(String[] args) {
-        
+        int[][] isConnected = {
+            {1,1,0},
+            {1,1,0},
+            {0,0,1}
+        };
+        Number_of_provinces obj = new Number_of_provinces();
+        System.out.println(obj.findCircleNum(isConnected));
     }
 }
