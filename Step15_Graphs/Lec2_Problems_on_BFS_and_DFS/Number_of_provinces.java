@@ -1,4 +1,4 @@
-package Lec_2_Problems_on_BFS_and_DFS;
+package Lec2_Problems_on_BFS_and_DFS;
 
 import java.util.ArrayList;
 
