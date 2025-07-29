@@ -77,5 +77,7 @@ public class Connected_Components_Problem_in_Matrix {
         };
         int result = numIslands(grid);
         System.out.println("Number of islands: " + result);
+        System.out.println("End...! ");
+        
     }
 }
