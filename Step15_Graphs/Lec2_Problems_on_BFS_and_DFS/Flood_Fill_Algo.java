@@ -33,6 +33,21 @@ public class Flood_Fill_Algo {
     }
 
     public static void main(String[] args) {
+        int[][] image = {
+            {1, 1, 1},
+            {1, 1, 0},
+            {1, 0, 1}
+        };
+        int sr = 1, sc = 1, newColor = 2;
 
+        Flood_Fill_Algo obj = new Flood_Fill_Algo();
+        int[][] result = obj.floodFill(image, sr, sc, newColor);
+
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[0].length; j++) {
+            System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
