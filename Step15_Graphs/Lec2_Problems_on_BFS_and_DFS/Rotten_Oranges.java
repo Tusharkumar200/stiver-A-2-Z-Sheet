@@ -1,5 +1,3 @@
-package Lec2_Problems_on_BFS_and_DFS;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -48,11 +46,11 @@ public class Rotten_Oranges {
         int cnt =0;
 
         while(!q.isEmpty()){
-            int r = q.peek().row;
-            int c = q.peek().col;
-            int t = q.peek().tm;
+            Pair current = q.poll();
+            int r = current.row;
+            int c = current.col;
+            int t = current.tm;
             tm = Math.max(tm ,t);
-            q.remove();
 
             for(int i=0; i<4; i++){
 
