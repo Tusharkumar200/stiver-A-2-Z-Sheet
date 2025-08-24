@@ -23,7 +23,7 @@ public class Cycle_Detection_in_undirected_Graph_BFS {
 
         while (!q.isEmpty()) {
 
-            int node = q.peek();
+            int node = q.peek().first;
             int par = q.peek().second;
             q.remove();
 
